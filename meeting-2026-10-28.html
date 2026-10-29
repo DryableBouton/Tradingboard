@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#05080f">
+<title>Morning Trade Meeting · Wednesday, October 28, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05080f; --bg2:#0a101d; --card:#0c1322; --card2:#101a2e; --line:#1a2640; --line2:#24344f;
+  --txt:#e6ebf5; --mut:#8a97b0; --dim:#5d6b85; --gold:#d4af37; --gold2:#f1d47a; --teal:#2dd4bf;
+  --up:#34d399; --dn:#f87171; --warn:#fbbf24; --blue:#60a5fa; --violet:#a78bfa;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace; --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box} html{-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,rgba(212,175,55,.07),transparent 60%),radial-gradient(900px 500px at -10% 10%,rgba(45,212,191,.05),transparent 60%),var(--bg);
+  color:var(--txt);font:15px/1.55 var(--sans);padding:env(safe-area-inset-top) 0 40px}
+a{color:var(--teal);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1240px;margin:0 auto;padding:0 14px}
+.mono{font-family:var(--mono);font-feature-settings:"tnum"}
+.up{color:var(--up)} .dn{color:var(--dn)} .flat{color:var(--mut)} .gold{color:var(--gold)}
+
+.topbar{position:sticky;top:0;z-index:20;background:rgba(5,8,15,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:12px;height:48px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.14em;font-size:11.5px;text-transform:uppercase;white-space:nowrap}
+.logo{width:24px;height:24px;border:1.5px solid var(--gold);border-radius:6px;display:grid;place-items:center;color:var(--gold);font:700 12px var(--mono)}
+.brand small{color:var(--mut);font-weight:500;letter-spacing:.1em}
+.status{margin-left:auto;display:flex;align-items:center;gap:8px;font:600 11px var(--mono);letter-spacing:.06em}
+.pill{white-space:nowrap;padding:3px 8px;border-radius:999px;border:1px solid var(--line2);background:var(--card)}
+.pill .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.st-OPEN .dot{background:var(--up);box-shadow:0 0 8px var(--up)} .st-PREMARKET .dot{background:var(--warn);box-shadow:0 0 8px var(--warn)}
+.st-OVERNIGHT .dot,.st-CLOSED .dot,.st-AFTER .dot{background:var(--dim)}
+
+.hero{padding:26px 0 10px}
+.kicker{font:600 11px var(--mono);color:var(--gold);letter-spacing:.22em;text-transform:uppercase}
+h1{font:700 30px/1.15 'Playfair Display',Georgia,serif;margin:8px 0 6px;letter-spacing:.005em}
+.sub{color:var(--mut);font-size:13.5px}
+.heroGrid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px;margin-top:18px}
+.brief{background:linear-gradient(180deg,rgba(212,175,55,.08),rgba(212,175,55,.02));border:1px solid rgba(212,175,55,.35);border-radius:14px;padding:16px 18px}
+.brief h2{margin:0 0 6px;font-size:17px;line-height:1.35}
+.brief ul{margin:8px 0 0;padding-left:18px} .brief li{margin:5px 0;color:#d5dceb}
+.clock{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.clock .big{font:700 30px var(--mono);letter-spacing:.02em}
+.lbl{font:600 10.5px var(--mono);color:var(--dim);letter-spacing:.16em;text-transform:uppercase}
+.mood{display:flex;align-items:center;gap:10px}
+.gauge{flex:1;height:8px;border-radius:99px;background:linear-gradient(90deg,var(--dn),var(--warn) 50%,var(--up));position:relative}
+.gauge i{position:absolute;top:-4px;width:4px;height:16px;border-radius:2px;background:#fff;box-shadow:0 0 0 2px var(--bg)}
+
+section{margin-top:26px}
+.sh{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.sh .num{font:700 11px var(--mono);color:var(--gold);border:1px solid rgba(212,175,55,.4);border-radius:5px;padding:1px 6px}
+.sh h3{margin:0;font-size:18px;font-weight:700;letter-spacing:.01em}
+.wtm{color:var(--mut);font-size:13px;margin:2px 0 12px;padding-left:10px;border-left:2px solid var(--teal)}
+.wtm b{color:var(--teal);font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.grid{display:grid;gap:12px}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:10px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 12px 9px;position:relative;overflow:hidden}
+.tile .t1{display:flex;justify-content:space-between;align-items:center}
+.tile .nm{font:700 12px var(--mono);letter-spacing:.05em}
+.tile .chg{font:600 12px var(--mono)}
+.tile .px{font:700 19px var(--mono);margin:3px 0 1px}
+.tile .pre{font:500 11px var(--mono);color:var(--warn)}
+.tile .ex{font-size:11.5px;color:var(--mut);line-height:1.35;margin-top:4px;min-height:31px}
+.tile .spark{display:block;width:100%;height:26px;margin:4px 0 2px;opacity:.95}
+.tile.na .px{color:var(--dim)} .tile .asof{font:500 9.5px var(--mono);color:var(--dim);margin-top:5px}
+
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:78px 1fr;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl .tm{font:600 12px var(--mono);color:var(--gold2)}
+.tl .ev{font-weight:600} .tl .why{color:var(--mut);font-size:13px}
+.imp{display:inline-block;font:700 9.5px var(--mono);letter-spacing:.1em;padding:1px 5px;border-radius:4px;margin-left:6px;vertical-align:2px}
+.imp-high{background:rgba(248,113,113,.15);color:var(--dn)} .imp-med{background:rgba(251,191,36,.13);color:var(--warn)} .imp-low{background:rgba(148,163,184,.12);color:var(--mut)}
+.news{display:flex;flex-direction:column;gap:10px}
+.nw{padding:10px 12px;background:var(--card2);border:1px solid var(--line);border-radius:10px}
+.nw .hd{font-weight:600;font-size:14px} .nw .so{color:#cbd5e1;font-size:13px;margin-top:3px} .nw .src{font:500 10.5px var(--mono);color:var(--dim);margin-top:4px}
+
+.sect{display:grid;grid-template-columns:26px 1.4fr 2fr 64px 64px 64px 86px 80px;align-items:center;gap:8px;padding:7px 4px;border-bottom:1px solid var(--line);font-size:13px}
+.sect.head{font:600 10px var(--mono);color:var(--dim);letter-spacing:.12em;text-transform:uppercase}
+.sect .rk{font:700 12px var(--mono);color:var(--dim)} .sect .tk{font:700 12.5px var(--mono)} .sect .sn{color:var(--mut);font-size:11.5px;display:block}
+.bar{height:8px;border-radius:99px;background:var(--line);position:relative;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:99px}
+.trend{font:600 10.5px var(--mono);padding:2px 6px;border-radius:5px;text-align:center}
+.tr-Uptrend{background:rgba(52,211,153,.12);color:var(--up)} .tr-Downtrend{background:rgba(248,113,113,.12);color:var(--dn)} .tr-Choppy{background:rgba(148,163,184,.12);color:var(--mut)}
+.sect.top3{background:linear-gradient(90deg,rgba(212,175,55,.07),transparent)}
+
+.lvgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lv-num{font:600 10.5px var(--mono)} .lv-lab{font:500 10px var(--sans)} .lv-now{font:700 11px var(--mono);fill:#f8fafc}
+.zone{font:700 12px var(--mono);padding:6px 10px;border-radius:8px;margin:6px 0 2px;display:inline-block}
+.z-up{background:rgba(52,211,153,.12);color:var(--up)} .z-down{background:rgba(248,113,113,.12);color:var(--dn)} .z-flat{background:rgba(251,191,36,.1);color:var(--warn)}
+
+.ideas{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+.idea{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 15px;display:flex;flex-direction:column;gap:7px}
+.who{display:flex;align-items:center;gap:9px}
+.av{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:700 12px var(--mono);background:var(--card2);border:1px solid var(--line2);color:var(--gold2)}
+.who b{font-size:13.5px} .who small{display:block;color:var(--dim);font:500 10.5px var(--mono)}
+.verd{margin-left:auto;font:600 9.5px var(--mono);letter-spacing:.08em;padding:2px 6px;border-radius:4px;background:rgba(251,191,36,.1);color:var(--warn);text-transform:uppercase;white-space:nowrap}
+.idea .tks{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:600 11px var(--mono);padding:2px 7px;border-radius:6px;background:var(--card2);border:1px solid var(--line2)}
+.idea .q{font-size:13px;color:#cbd5e1;border-left:2px solid var(--line2);padding-left:9px;font-style:italic}
+.take{font-size:13px;background:rgba(45,212,191,.06);border:1px solid rgba(45,212,191,.2);border-radius:9px;padding:8px 10px}
+.take b{color:var(--teal)}
+.stance{font:700 10px var(--mono);letter-spacing:.1em;padding:2px 7px;border-radius:4px}
+.s-agree{background:rgba(52,211,153,.13);color:var(--up)} .s-wait{background:rgba(251,191,36,.12);color:var(--warn)} .s-skip{background:rgba(248,113,113,.12);color:var(--dn)} .s-research{background:rgba(96,165,250,.12);color:var(--blue)}
+
+.risk{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.riskbar{flex:1;min-width:200px;height:12px;border-radius:99px;background:var(--line);overflow:hidden;position:relative}
+.riskbar i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--teal),var(--warn))}
+.plans{display:grid;gap:14px}
+.plan{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line2);border-radius:16px;overflow:hidden}
+.plan .ph{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.plan .tkr{font:800 22px var(--mono);letter-spacing:.02em}
+.dir{font:700 11px var(--mono);letter-spacing:.1em;padding:3px 8px;border-radius:6px}
+.d-long{background:rgba(52,211,153,.14);color:var(--up)} .d-short{background:rgba(248,113,113,.14);color:var(--dn)}
+.grade{font:700 11px var(--mono);color:var(--gold);border:1px solid rgba(212,175,55,.5);padding:2px 7px;border-radius:6px}
+.plan .ph .sp{margin-left:auto;text-align:right} .plan .ph .sp .px{font:700 15px var(--mono)}
+.pbody{display:grid;grid-template-columns:1.25fr 1fr;gap:0}
+.pcol{padding:14px 16px} .pcol+.pcol{border-left:1px solid var(--line)}
+.kv{display:grid;grid-template-columns:118px 1fr;gap:6px 10px;font-size:13.5px}
+.kv dt{color:var(--dim);font:600 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;padding-top:2px}
+.kv dd{margin:0}
+.ladder2{display:flex;flex-direction:column;gap:4px;margin:10px 0}
+.lrow{display:flex;justify-content:space-between;font:600 12.5px var(--mono);padding:6px 10px;border-radius:8px}
+.l-tgt{background:rgba(52,211,153,.09);color:var(--up)} .l-ent{background:rgba(96,165,250,.1);color:var(--blue)} .l-stp{background:rgba(248,113,113,.1);color:var(--dn)}
+.sizebox{background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.3);border-radius:12px;padding:11px 12px;margin-top:6px}
+.sizebox .big{font:800 20px var(--mono);color:var(--gold2)}
+.sizebox .row{display:flex;justify-content:space-between;font:500 12.5px var(--mono);margin-top:4px;color:#cbd5e1}
+.why{font-size:14px;color:#dbe3f0} .why b{color:var(--gold2)}
+.warnbox{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.3);color:#fde68a;border-radius:9px;padding:8px 10px;font-size:12.5px;margin-top:8px}
+
+.lesson{background:linear-gradient(135deg,rgba(45,212,191,.09),rgba(167,139,250,.06));border:1px solid rgba(45,212,191,.3);border-radius:16px;padding:18px}
+.lesson h4{margin:0 0 6px;font:700 20px 'Playfair Display',Georgia,serif}
+.lesson p{margin:8px 0;color:#dbe3f0}
+.example{font:500 13px var(--mono);background:rgba(5,8,15,.5);border:1px solid var(--line2);border-radius:10px;padding:10px 12px;margin-top:10px;white-space:pre-wrap;color:#cbd5e1}
+
+.score{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.stat .v{font:800 21px var(--mono);margin-top:3px} .stat .s{font-size:11.5px;color:var(--mut)}
+.prog{height:14px;border-radius:99px;background:var(--line);overflow:hidden;position:relative;margin:8px 0 4px}
+.prog i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:99px;min-width:4px}
+.milestones{position:relative;height:14px;font:500 10.5px var(--mono);color:var(--dim)} .milestones span{position:absolute;transform:translateX(-50%);white-space:nowrap} .milestones span:first-child{transform:none} .milestones span:last-child{transform:translateX(-100%)}
+table.pos{width:100%;border-collapse:collapse;font:500 12.5px var(--mono)} table.pos th{color:var(--dim);font-size:10px;letter-spacing:.1em;text-align:left;padding:6px;border-bottom:1px solid var(--line)} table.pos td{padding:7px 6px;border-bottom:1px solid var(--line)}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+summary{cursor:pointer;font-weight:600}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px 16px;margin-top:10px;font-size:13px}
+.gloss b{color:var(--gold2);font-family:var(--mono);font-size:12px}
+footer{margin-top:30px;color:var(--dim);font-size:11.5px;border-top:1px solid var(--line);padding-top:14px}
+.ph-banner{background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.4);color:#fecaca;border-radius:10px;padding:10px 14px;margin-top:14px;font-weight:600}
+@media (max-width:860px){
+  .heroGrid,.cols2,.lvgrid,.pbody{grid-template-columns:1fr}
+  .pcol+.pcol{border-left:0;border-top:1px solid var(--line)}
+  .score{grid-template-columns:1fr 1fr}
+  h1{font-size:25px}
+  .sect{grid-template-columns:22px 1.5fr 1fr 58px 70px;font-size:12px}
+  .sect .c-d1,.sect .c-m1,.sect .c-sp{display:none}
+  .ideas{grid-template-columns:1fr}
+  .tiles{grid-template-columns:1fr 1fr}
+  .tile .px{font-size:17px}
+  .brand small{display:none} .brand{font-size:10px;letter-spacing:.08em} .status{gap:5px;font-size:10px}
+  .kv{grid-template-columns:100px 1fr}
+}
+
+
+.oxp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.oxp .card h5{margin:0 0 8px;font-size:14px;letter-spacing:.02em}
+.mny{display:grid;grid-template-columns:54px 1fr;gap:6px 10px;font-size:13px;align-items:start}
+.mtag{font:700 10.5px var(--mono);letter-spacing:.08em;padding:2px 6px;border-radius:5px;text-align:center}
+.m-ITM{background:rgba(52,211,153,.13);color:var(--up)} .m-ATM{background:rgba(96,165,250,.14);color:var(--blue)} .m-OTM{background:rgba(167,139,250,.14);color:var(--violet)}
+.tiers{width:100%;border-collapse:collapse;font-size:12.5px} .tiers th{font:600 10px var(--mono);color:var(--dim);text-align:left;letter-spacing:.08em;padding:4px 6px;border-bottom:1px solid var(--line)} .tiers td{padding:6px;border-bottom:1px dashed var(--line);vertical-align:top} .tiers td:first-child{font-weight:700;white-space:nowrap}
+.oidea{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line2);border-radius:16px;overflow:hidden;margin-bottom:14px}
+.oidea .oh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:13px 16px;border-bottom:1px solid var(--line)}
+.oidea .oh .tkr{font:800 20px var(--mono)}
+.oidea .ob{padding:12px 16px}
+.qb{display:inline-block;font:700 10px var(--mono);padding:2px 5px;border-radius:4px;margin:1px 2px 1px 0;letter-spacing:.03em}
+.q-pass,.q-ok{background:rgba(34,197,94,.16);color:#4ade80}.q-ok{background:rgba(148,163,184,.14);color:#cbd5e1}.q-caution,.q-check{background:rgba(245,158,11,.16);color:#fbbf24}.q-fail{background:rgba(239,68,68,.18);color:#f87171}
+.qg{display:inline-block;font:800 13px var(--mono);width:24px;text-align:center;border-radius:5px;padding:2px 0;margin-right:4px}.qg-A{background:#16a34a;color:#04110a}.qg-B{background:#65a30d;color:#071003}.qg-C{background:#d97706;color:#120a00}.qg-F{background:#dc2626;color:#fff}
+.qlist{font-size:12.5px;margin:6px 0 10px;padding-left:18px}.qlist li{margin:2px 0}
+.pick{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.38);border-radius:12px;padding:11px 13px;margin:4px 0 12px}
+.pick .star{font:800 11px var(--mono);color:#0b0f19;background:var(--gold);padding:4px 8px;border-radius:6px;letter-spacing:.08em}
+.pick .ct{font:800 15px var(--mono);color:var(--gold2)} .pick .rs{font-size:13px;color:#e2e8f0;margin-top:2px}
+.nopick{background:rgba(248,113,113,.08);border-color:rgba(248,113,113,.35)} .nopick .star{background:var(--dn)}
+table.om{width:100%;border-collapse:collapse;font:500 12.5px var(--mono)}
+table.om th{font:600 9.5px var(--mono);color:var(--dim);letter-spacing:.08em;text-align:left;padding:6px 6px;border-bottom:1px solid var(--line2);white-space:nowrap}
+table.om td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+table.om tr.rec td{background:rgba(212,175,55,.07)} table.om tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--gold)}
+table.om .sm{display:block;font:500 10.5px var(--sans);color:var(--mut);margin-top:2px;white-space:normal}
+.src-live{color:var(--up)} .src-last{color:var(--warn)}
+.tierchip{font:700 10.5px var(--mono);padding:2px 6px;border-radius:5px;background:var(--card);border:1px solid var(--line2);white-space:nowrap}
+.planchip{font:700 9.5px var(--mono);color:var(--teal);border:1px solid rgba(45,212,191,.4);border-radius:4px;padding:1px 4px;margin-left:4px}
+.toobig{color:var(--dn);font-size:11px}
+@media (max-width:860px){
+  .oxp{grid-template-columns:1fr}
+  .pick{grid-template-columns:1fr;gap:6px} .pick .star{justify-self:start}
+  table.om thead{display:none}
+  table.om, table.om tbody, table.om tr, table.om td{display:block;width:100%}
+  table.om tr{border:1px solid var(--line);border-radius:12px;margin:0 0 10px;padding:8px 10px;background:var(--card)}
+  table.om tr.rec{border-color:rgba(212,175,55,.55)}
+  table.om tr.rec td{background:transparent} table.om tr.rec td:first-child{box-shadow:none}
+  table.om td{border:0;padding:4px 0 4px 104px;position:relative;min-height:22px}
+  table.om td::before{content:attr(data-l);position:absolute;left:0;top:6px;width:98px;font:600 9px var(--mono);color:var(--dim);letter-spacing:.08em;text-transform:uppercase}
+  table.om td .sm{display:inline;margin-left:6px}
+  table.om td.hd{padding-left:0;font-size:13.5px;border-bottom:1px dashed var(--line);padding-bottom:7px;margin-bottom:3px}
+  table.om td.hd::before{display:none}
+}
+
+
+.exitp{border-top:1px solid var(--line);padding:13px 16px;background:linear-gradient(180deg,rgba(248,113,113,.04),rgba(45,212,191,.03))}
+.exitp .eh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.exitp .eh b{font-size:14px}
+.lock{font:700 9.5px var(--mono);letter-spacing:.1em;color:#0b0f19;background:var(--teal);padding:3px 7px;border-radius:5px}
+.exitp ol{margin:0;padding-left:20px;font-size:13.5px} .exitp li{margin:5px 0;color:#dbe3f0}
+.exitp .sum{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.exitp .sum span{font:600 11px var(--mono);padding:3px 8px;border-radius:6px;background:var(--card);border:1px solid var(--line2)}
+
+.mind{display:grid;grid-template-columns:1.2fr 1fr;gap:12px}
+.princ{background:linear-gradient(135deg,rgba(167,139,250,.10),rgba(212,175,55,.05));border:1px solid rgba(167,139,250,.35);border-radius:16px;padding:16px 18px}
+.princ h4{margin:4px 0 6px;font:700 19px 'Playfair Display',Georgia,serif}
+.princ p{margin:6px 0;color:#dbe3f0;font-size:14px}
+.chk label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line);font-size:13.5px;cursor:pointer}
+.chk input{width:18px;height:18px;accent-color:var(--teal);margin-top:2px;flex:none}
+.rules{counter-reset:r;list-style:none;margin:0;padding:0}
+.rules li{counter-increment:r;display:grid;grid-template-columns:26px 1fr;gap:8px;padding:6px 0;font-size:13.5px;border-bottom:1px dashed var(--line)}
+.rules li::before{content:counter(r);font:700 11px var(--mono);color:#0b0f19;background:var(--gold);border-radius:6px;width:22px;height:22px;display:grid;place-items:center}
+
+.disc{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:center}
+.ring{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;margin:auto;background:conic-gradient(var(--teal) calc(var(--p)*1%),var(--line) 0)}
+.ring div{width:104px;height:104px;border-radius:50%;background:var(--card);display:grid;place-items:center;text-align:center;font:800 24px var(--mono)}
+.ring small{display:block;font:600 9.5px var(--mono);color:var(--dim);letter-spacing:.1em}
+
+
+
+
+
+
+.bdot{width:10px;height:10px;border-radius:3px;display:inline-block}
+table.az{width:100%;border-collapse:collapse;font:500 12.5px var(--mono);margin-top:8px}
+table.az th{font:600 9.5px var(--mono);color:var(--dim);letter-spacing:.08em;text-align:left;padding:6px;border-bottom:1px solid var(--line2)}
+table.az td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+table.az .sm{display:block;font:500 11px var(--sans);color:var(--mut);margin-top:2px}
+
+   
+ 
+
+ 
+@media (max-width:860px){
+  .mind,.disc{grid-template-columns:1fr}
+  table.az thead{display:none}
+  table.az, table.az tbody, table.az tr, table.az td{display:block;width:100%}
+  table.az tr{border:1px solid var(--line);border-radius:12px;margin:0 0 10px;padding:8px 10px;background:var(--card2)}
+  table.az td{border:0;padding:4px 0 4px 96px;position:relative}
+  table.az td::before{content:attr(data-l);position:absolute;left:0;top:6px;width:90px;font:600 9px var(--mono);color:var(--dim);letter-spacing:.08em;text-transform:uppercase}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <div class="brand"><div class="logo">W</div>Morning Trade Meeting <small>· Dryable Capital</small></div>
+  <div class="status"><span class="pill st-PREMARKET"><span class="dot"></span>PREMARKET</span><span class="pill mono" id="cd" title="Countdown to the 9:30 AM ET opening bell">0h 42m</span></div>
+</div></div>
+
+<div class="wrap">
+
+
+<div class="hero">
+  <div class="kicker">Daily Briefing · Chaired by Warren</div>
+  <h1>Wednesday, October 28, 2026</h1>
+  <div class="sub">Built Oct 28, 2026 8:47 AM ET · Prices are delayed quotes from free feeds · Premarket trading (4:00-9:30 AM). Thin volume; prices can jump around.</div>
+  <div class="heroGrid">
+    <div class="brief">
+      <div class="lbl" style="color:var(--gold)">Today in one breath</div>
+      <h2>Fed day: decision at 2:00 PM, then Microsoft and Alphabet after the close. Mancini says there&#39;s nothing to do up here, so one small SPY call only on a pullback that holds ~$768.65 (ES 7,748) after 10:00, sold by 1:30 PM; otherwise no trade, and nothing held into the Fed.</h2>
+      <ul><li><b>Tuesday:</b> SPY rose 0.6% to <b>$769.66</b> (range $765.21–771.14) and QQQ jumped 1.3% to <b>$721.25</b>, led by chips after Broadcom's $63B AI financing deal. <b>Yesterday's plan worked:</b> SPY dipped to $765.21 after 10:00, the 10:25 5-minute candle closed back above $766.20 ($766.63), and target 1 ($768.85) was hit around 11:00. That's exactly why we wait for the pullback instead of buying the open. If you took it, tell me your fill so I can log it.</li><li><b>Overnight:</b> SK Hynix reported a record quarter (profit up 632%), lifting Micron (+4% premarket), Arm, AMD, Intel and Marvell. Oil bounced back to ~$101.8 (+1.9%). Alphabet is up ~1% premarket, Microsoft slightly lower (Yahoo Finance, Quartz).</li><li><b>This morning:</b> S&P futures ~+0.1–0.2%, Nasdaq ~+0.4%, Dow ~−0.2%. VIX ~17.4, 10-year yield right at ~5.0%, dollar flat. Bitcoin ~$80.7K, starting to grind up (Daan: shorts getting squeezed).</li><li><b>The Fed decides at 2:00 PM</b> (a hold at 3.75–4.00% is ~92% expected); Chair Warsh's 2:30 press conference matters more, since markets price a ~75% chance of another hike in December. Microsoft, Alphabet and ServiceNow report after the close; Amazon and Intel Thursday, along with PCE inflation.</li><li><b>Today's plan:</b> don't chase the gap. If after 10:00 SPY dips to ~$768.65 (ES 7,748) and a 5-minute candle closes back above $769.10, buy a small SPY call aiming for $771.14 then $772.10. A 5-minute close under $768.20 first = no trade. Nothing by 12:00 = <b>no trade today</b>. <b>Everything sold by 1:30 PM</b>, well before the Fed.</li></ul>
+    </div>
+    <div class="clock">
+      <div><div class="lbl">Opening bell in</div><div class="big" id="cd2">0h 42m</div><div class="sub">Next open: Wed Oct 28, 9:30 AM ET</div></div>
+      
+      <div><div class="lbl">Market mood</div>
+        <div class="mood"><span class="dn mono" style="font-size:11px">FEAR</span><div class="gauge"><i style="left:calc(55% - 2px)"></i></div><span class="up mono" style="font-size:11px">GREED</span></div>
+        <div style="font-weight:700;margin-top:6px">Rally intact, two big tests today</div>
+        <div class="sub">Three green sessions and a calm VIX help buyers, and chips are strong again. But the Fed at 2:00 and Microsoft/Alphabet after the close can swing everything, so the only trades are small, early, and closed before 1:30.</div></div>
+      
+      <div><div class="lbl">Risk rules</div><div class="sub mono" style="color:var(--txt)">Risk 1–3% of your account per trade · hard daily stop · Max 3 trades</div><div class="sub" style="font-size:11.5px">Size every trade so a stop-out costs a fixed small % of YOUR account.</div></div>
+    </div>
+  </div>
+</div>
+
+
+
+<section>
+  <div class="sh"><span class="num">00</span><h3>Mindset &amp; pre-market check-in</h3></div>
+  <div class="wtm"><b>What this means:</b> Most traders don't lose because of bad setups. They lose because they don't sell: they give back wins and hold losers. Do this 60-second check before 9:30. The ideas are inspired by Mark Douglas's <i>Trading in the Zone</i> (in my words).</div>
+  <div class="mind">
+    <div class="princ">
+      <div class="lbl" style="color:var(--violet)">Today's principle</div>
+      <h4>You don&#39;t need to trade every day</h4>
+      <p>Mark Douglas says the market owes you nothing and offers endless chances. A pro's edge includes the days they choose not to play. Sitting out an unknowable event is a skill, not a missed opportunity.</p>
+      <p><b class="gold">Applied today:</b> Nothing before 10:00. Only the $768.65 hold triggers a trade. Stop and target 1 go in at fill. 12:00 no trigger = done. Flat by 1:30. Watch the Fed with no position.</p>
+      <div class="lbl" style="margin-top:12px">Pre-market check-in (tap to tick)</div>
+      <div class="chk"><label><input type="checkbox" data-k="ck1"> <span>Sleep &amp; mood: did I sleep OK and am I calm? (If not: half size or no trades today.)</span></label><label><input type="checkbox" data-k="ck2"> <span>Am I chasing yesterday, trying to win back a loss or repeat a big win?</span></label><label><input type="checkbox" data-k="ck3"> <span>Will I let my stop do its job, with no moving it, no &#39;just a bit more room&#39;?</span></label></div>
+      <div class="sub" style="font-size:12px;margin-top:6px">Any "no" or "yes, I'm chasing"? Trade half size or sit today out. Sitting out is a position.</div>
+    </div>
+    <div class="card">
+      <div class="lbl" style="margin-bottom:6px;color:var(--gold)">House rules (non-negotiable)</div>
+      <ol class="rules"><li><span>Place the stop as a real order the moment you enter. It&#39;s decided before entry, not during.</span></li><li><span>Never move a stop further away. You can only tighten it.</span></li><li><span>No averaging down on short-term trades. A loser doesn&#39;t get more money.</span></li><li><span>Take partial profits at target 1 (sell ⅓, or all if under 3 contracts), then stop to breakeven.</span></li><li><span>Hit your daily loss limit → done for the day. Close the app.</span></li><li><span>No revenge trades: after a loss, the next trade must be a planned setup from the board.</span></li><li><span>Only trade setups on today&#39;s board, at the size the board calculates.</span></li></ol>
+      <div class="sub" style="font-size:12px;margin-top:8px">Every broken rule gets logged your trade journal, even when the trade made money.</div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="sh"><span class="num">01</span><h3>Market snapshot</h3></div>
+  <div class="wtm"><b>What this means:</b> Futures are slightly green, Nasdaq leading on chips. VIX near 17 says the market is calm going into the Fed. Yields at 5% and oil back above $100 are the background worries.</div>
+  <div class="tiles">
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">SPY</span><span class="chg up">+0.56%</span></div>
+      <div class="px">769.66</div>
+      <div class="pre">pre 771.26 (+0.21%)</div>
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g25427673" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,17.5 L8.5,19.1 L16.0,20.9 L23.6,19.4 L31.1,12.9 L38.6,6.9 L46.1,2.0 L53.7,4.2 L61.2,7.9 L68.7,2.6 L76.2,3.1 L83.8,3.2 L91.3,12.9 L98.8,10.4 L106.3,20.2 L113.9,16.5 L121.4,13.6 L128.9,8.9 L136.4,19.4 L144.0,24.0 L151.5,17.8 L159.0,12.9 L159,25 Z" fill="url(#g25427673)"/><polyline points="1.0,17.5 8.5,19.1 16.0,20.9 23.6,19.4 31.1,12.9 38.6,6.9 46.1,2.0 53.7,4.2 61.2,7.9 68.7,2.6 76.2,3.1 83.8,3.2 91.3,12.9 98.8,10.4 106.3,20.2 113.9,16.5 121.4,13.6 128.9,8.9 136.4,19.4 144.0,24.0 151.5,17.8 159.0,12.9" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">S&amp;P 500 ETF: the 500 biggest US companies. &#39;The market.&#39;</div>
+      <div class="asof">as of Oct 27 04:00 PM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">QQQ</span><span class="chg up">+1.27%</span></div>
+      <div class="px">721.25</div>
+      <div class="pre">pre 723.67 (+0.34%)</div>
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g86673782" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,11.2 L8.5,10.7 L16.0,9.9 L23.6,9.0 L31.1,6.0 L38.6,3.4 L46.1,2.0 L53.7,2.8 L61.2,6.8 L68.7,5.3 L76.2,7.4 L83.8,8.4 L91.3,14.2 L98.8,14.6 L106.3,21.9 L113.9,18.4 L121.4,18.7 L128.9,15.7 L136.4,24.0 L144.0,24.0 L151.5,20.9 L159.0,17.3 L159,25 Z" fill="url(#g86673782)"/><polyline points="1.0,11.2 8.5,10.7 16.0,9.9 23.6,9.0 31.1,6.0 38.6,3.4 46.1,2.0 53.7,2.8 61.2,6.8 68.7,5.3 76.2,7.4 83.8,8.4 91.3,14.2 98.8,14.6 106.3,21.9 113.9,18.4 121.4,18.7 128.9,15.7 136.4,24.0 144.0,24.0 151.5,20.9 159.0,17.3" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">Nasdaq-100 ETF: big tech (Apple, Nvidia, Microsoft...).</div>
+      <div class="asof">as of Oct 27 04:00 PM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">IWM</span><span class="chg up">+1.15%</span></div>
+      <div class="px">280.18</div>
+      <div class="pre">pre 280.20 (+0.01%)</div>
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g79756353" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,7.7 L8.5,9.4 L16.0,11.3 L23.6,9.4 L31.1,5.2 L38.6,2.0 L46.1,5.5 L53.7,11.7 L61.2,11.9 L68.7,9.5 L76.2,11.3 L83.8,13.4 L91.3,22.4 L98.8,16.1 L106.3,24.0 L113.9,22.6 L121.4,14.9 L128.9,13.7 L136.4,13.4 L144.0,15.0 L151.5,12.9 L159.0,7.4 L159,25 Z" fill="url(#g79756353)"/><polyline points="1.0,7.7 8.5,9.4 16.0,11.3 23.6,9.4 31.1,5.2 38.6,2.0 46.1,5.5 53.7,11.7 61.2,11.9 68.7,9.5 76.2,11.3 83.8,13.4 91.3,22.4 98.8,16.1 106.3,24.0 113.9,22.6 121.4,14.9 128.9,13.7 136.4,13.4 144.0,15.0 151.5,12.9 159.0,7.4" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">Russell 2000 ETF: small US companies. Sensitive to interest rates.</div>
+      <div class="asof">as of Oct 27 04:00 PM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">DIA</span><span class="chg up">+0.06%</span></div>
+      <div class="px">523.28</div>
+      <div class="pre">pre 523.27 (+0.00%)</div>
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g23528737" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,17.8 L8.5,19.1 L16.0,24.0 L23.6,23.9 L31.1,21.1 L38.6,20.0 L46.1,17.2 L53.7,21.2 L61.2,20.5 L68.7,15.4 L76.2,13.4 L83.8,15.3 L91.3,15.9 L98.8,9.6 L106.3,12.0 L113.9,12.2 L121.4,6.0 L128.9,2.2 L136.4,2.0 L144.0,9.4 L151.5,7.6 L159.0,7.2 L159,25 Z" fill="url(#g23528737)"/><polyline points="1.0,17.8 8.5,19.1 16.0,24.0 23.6,23.9 31.1,21.1 38.6,20.0 46.1,17.2 53.7,21.2 61.2,20.5 68.7,15.4 76.2,13.4 83.8,15.3 91.3,15.9 98.8,9.6 106.3,12.0 113.9,12.2 121.4,6.0 128.9,2.2 136.4,2.0 144.0,9.4 151.5,7.6 159.0,7.2" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">Dow Jones ETF: 30 old-school blue chips.</div>
+      <div class="asof">as of Oct 27 04:00 PM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">S&amp;P futures</span><span class="chg up">+0.23%</span></div>
+      <div class="px">7,775.75</div>
+      
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g96977697" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,16.6 L8.5,18.3 L16.0,17.4 L23.6,11.9 L31.1,6.9 L38.6,2.0 L46.1,4.2 L53.7,7.9 L61.2,3.5 L68.7,3.6 L76.2,3.9 L83.8,12.7 L91.3,10.5 L98.8,19.4 L106.3,16.3 L113.9,14.2 L121.4,9.6 L128.9,19.4 L136.4,24.0 L144.0,18.4 L151.5,13.9 L159.0,12.1 L159,25 Z" fill="url(#g96977697)"/><polyline points="1.0,16.6 8.5,18.3 16.0,17.4 23.6,11.9 31.1,6.9 38.6,2.0 46.1,4.2 53.7,7.9 61.2,3.5 68.7,3.6 76.2,3.9 83.8,12.7 91.3,10.5 98.8,19.4 106.3,16.3 113.9,14.2 121.4,9.6 128.9,19.4 136.4,24.0 144.0,18.4 151.5,13.9 159.0,12.1" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">Trades overnight. Tells you how SPY will likely open.</div>
+      <div class="asof">as of Oct 28 08:37 AM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">Nasdaq futures</span><span class="chg up">+0.39%</span></div>
+      <div class="px">29,927.50</div>
+      
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g96282566" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,10.1 L8.5,9.3 L16.0,8.7 L23.6,5.9 L31.1,3.5 L38.6,2.0 L46.1,2.8 L53.7,6.8 L61.2,5.5 L68.7,7.4 L76.2,8.4 L83.8,14.1 L91.3,14.5 L98.8,21.5 L106.3,18.4 L113.9,18.8 L121.4,15.7 L128.9,23.8 L136.4,24.0 L144.0,21.0 L151.5,17.5 L159.0,16.5 L159,25 Z" fill="url(#g96282566)"/><polyline points="1.0,10.1 8.5,9.3 16.0,8.7 23.6,5.9 31.1,3.5 38.6,2.0 46.1,2.8 53.7,6.8 61.2,5.5 68.7,7.4 76.2,8.4 83.8,14.1 91.3,14.5 98.8,21.5 106.3,18.4 113.9,18.8 121.4,15.7 128.9,23.8 136.4,24.0 144.0,21.0 151.5,17.5 159.0,16.5" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">Overnight read on how tech (QQQ) will open.</div>
+      <div class="asof">as of Oct 28 08:37 AM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">VIX</span><span class="chg dn">-0.63%</span></div>
+      <div class="px">17.41</div>
+      
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g85423033" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,18.9 L8.5,17.6 L16.0,17.4 L23.6,22.0 L31.1,21.1 L38.6,23.3 L46.1,23.0 L53.7,21.6 L61.2,24.0 L68.7,22.4 L76.2,22.2 L83.8,15.3 L91.3,17.1 L98.8,2.0 L106.3,8.6 L113.9,13.4 L121.4,16.1 L128.9,6.1 L136.4,4.3 L144.0,8.8 L151.5,12.6 L159.0,13.0 L159,25 Z" fill="url(#g85423033)"/><polyline points="1.0,18.9 8.5,17.6 16.0,17.4 23.6,22.0 31.1,21.1 38.6,23.3 46.1,23.0 53.7,21.6 61.2,24.0 68.7,22.4 76.2,22.2 83.8,15.3 91.3,17.1 98.8,2.0 106.3,8.6 113.9,13.4 121.4,16.1 128.9,6.1 136.4,4.3 144.0,8.8 151.5,12.6 159.0,13.0" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">The &#39;fear gauge&#39;. Under 20 = calm; over 30 = panic. High VIX = pricier options.</div>
+      <div class="asof">as of Oct 28 08:32 AM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">10Y yield</span><span class="chg up">+0.2 bp</span></div>
+      <div class="px">4.995%</div>
+      
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g58149442" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,5.4 L8.5,3.1 L16.0,6.5 L23.6,4.1 L31.1,2.0 L38.6,4.6 L46.1,4.1 L53.7,6.9 L61.2,6.1 L68.7,6.4 L76.2,7.8 L83.8,9.4 L91.3,15.6 L98.8,15.1 L106.3,12.8 L113.9,13.9 L121.4,12.1 L128.9,24.0 L136.4,21.8 L144.0,22.0 L151.5,21.5 L159.0,21.4 L159,25 Z" fill="url(#g58149442)"/><polyline points="1.0,5.4 8.5,3.1 16.0,6.5 23.6,4.1 31.1,2.0 38.6,4.6 46.1,4.1 53.7,6.9 61.2,6.1 68.7,6.4 76.2,7.8 83.8,9.4 91.3,15.6 98.8,15.1 106.3,12.8 113.9,13.9 121.4,12.1 128.9,24.0 136.4,21.8 144.0,22.0 151.5,21.5 159.0,21.4" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">Interest rate on 10-year US government bonds. Rising fast = pressure on stocks.</div>
+      <div class="asof">as of Oct 28 08:32 AM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">Dollar (DXY)</span><span class="chg up">+0.00%</span></div>
+      <div class="px">102.32</div>
+      
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g42208785" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,24.0 L8.5,22.5 L16.0,10.7 L23.6,13.8 L31.1,9.5 L38.6,15.6 L46.1,8.2 L53.7,10.0 L61.2,8.7 L68.7,2.0 L76.2,9.3 L83.8,2.5 L91.3,12.5 L98.8,15.5 L106.3,12.9 L113.9,17.5 L121.4,16.5 L128.9,19.6 L136.4,16.0 L144.0,13.3 L151.5,6.7 L159.0,6.7 L159,25 Z" fill="url(#g42208785)"/><polyline points="1.0,24.0 8.5,22.5 16.0,10.7 23.6,13.8 31.1,9.5 38.6,15.6 46.1,8.2 53.7,10.0 61.2,8.7 68.7,2.0 76.2,9.3 83.8,2.5 91.3,12.5 98.8,15.5 106.3,12.9 113.9,17.5 121.4,16.5 128.9,19.6 136.4,16.0 144.0,13.3 151.5,6.7 159.0,6.7" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">US dollar vs other currencies. Strong dollar usually hurts gold, crypto, big exporters.</div>
+      <div class="asof">as of Oct 28 08:37 AM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">Oil (WTI)</span><span class="chg up">+1.97%</span></div>
+      <div class="px">101.87</div>
+      
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g15512359" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,22.4 L8.5,20.9 L16.0,17.4 L23.6,20.0 L31.1,22.4 L38.6,22.3 L46.1,24.0 L53.7,19.4 L61.2,18.9 L68.7,16.2 L76.2,15.6 L83.8,14.3 L91.3,10.1 L98.8,5.2 L106.3,2.0 L113.9,4.7 L121.4,11.3 L128.9,8.0 L136.4,2.6 L144.0,4.7 L151.5,7.4 L159.0,4.6 L159,25 Z" fill="url(#g15512359)"/><polyline points="1.0,22.4 8.5,20.9 16.0,17.4 23.6,20.0 31.1,22.4 38.6,22.3 46.1,24.0 53.7,19.4 61.2,18.9 68.7,16.2 76.2,15.6 83.8,14.3 91.3,10.1 98.8,5.2 106.3,2.0 113.9,4.7 121.4,11.3 128.9,8.0 136.4,2.6 144.0,4.7 151.5,7.4 159.0,4.6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">US crude oil price. Spikes feed inflation and hit airlines.</div>
+      <div class="asof">as of Oct 28 08:37 AM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">Gold</span><span class="chg dn">-0.12%</span></div>
+      <div class="px">4,069.80</div>
+      
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g6322641" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,5.9 L8.5,5.1 L16.0,3.5 L23.6,7.7 L31.1,8.3 L38.6,5.1 L46.1,10.0 L53.7,8.3 L61.2,2.0 L68.7,4.7 L76.2,6.1 L83.8,13.4 L91.3,6.9 L98.8,5.7 L106.3,7.9 L113.9,9.8 L121.4,9.0 L128.9,18.5 L136.4,24.0 L144.0,20.8 L151.5,17.0 L159.0,17.5 L159,25 Z" fill="url(#g6322641)"/><polyline points="1.0,5.9 8.5,5.1 16.0,3.5 23.6,7.7 31.1,8.3 38.6,5.1 46.1,10.0 53.7,8.3 61.2,2.0 68.7,4.7 76.2,6.1 83.8,13.4 91.3,6.9 98.8,5.7 106.3,7.9 113.9,9.8 121.4,9.0 128.9,18.5 136.4,24.0 144.0,20.8 151.5,17.0 159.0,17.5" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">Safe-haven metal. Rises when people are worried.</div>
+      <div class="asof">as of Oct 28 08:37 AM ET</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">Bitcoin</span><span class="chg up">+0.59%</span></div>
+      <div class="px">80,709.00</div>
+      
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g83878650" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,6.0 L8.5,14.8 L16.0,10.1 L23.6,8.0 L31.1,3.8 L38.6,14.4 L46.1,7.0 L53.7,15.5 L61.2,12.3 L68.7,15.8 L76.2,16.4 L83.8,13.0 L91.3,13.9 L98.8,7.9 L106.3,2.0 L113.9,16.8 L121.4,18.1 L128.9,19.7 L136.4,23.9 L144.0,24.0 L151.5,19.6 L159.0,20.5 L159,25 Z" fill="url(#g83878650)"/><polyline points="1.0,6.0 8.5,14.8 16.0,10.1 23.6,8.0 31.1,3.8 38.6,14.4 46.1,7.0 53.7,15.5 61.2,12.3 68.7,15.8 76.2,16.4 83.8,13.0 91.3,13.9 98.8,7.9 106.3,2.0 113.9,16.8 121.4,18.1 128.9,19.7 136.4,23.9 144.0,24.0 151.5,19.6 159.0,20.5" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">Biggest crypto. Trades 24/7, often a &#39;risk appetite&#39; tell.</div>
+      <div class="asof">as of Oct 28 08:47 AM ET · CoinGecko (24h change)</div>
+    </div>
+  
+    <div class="tile ">
+      <div class="t1"><span class="nm">Ether</span><span class="chg up">+0.33%</span></div>
+      <div class="px">2,338.99</div>
+      
+      <svg class="spark" viewBox="0 0 160 26" width="160" height="26" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g69811148" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,25 L1.0,2.0 L8.5,10.8 L16.0,9.6 L23.6,8.0 L31.1,5.4 L38.6,13.2 L46.1,8.7 L53.7,15.5 L61.2,13.6 L68.7,15.4 L76.2,17.1 L83.8,16.3 L91.3,16.7 L98.8,13.0 L106.3,10.9 L113.9,18.3 L121.4,18.5 L128.9,20.9 L136.4,23.4 L144.0,24.0 L151.5,21.6 L159.0,22.6 L159,25 Z" fill="url(#g69811148)"/><polyline points="1.0,2.0 8.5,10.8 16.0,9.6 23.6,8.0 31.1,5.4 38.6,13.2 46.1,8.7 53.7,15.5 61.2,13.6 68.7,15.4 76.2,17.1 83.8,16.3 91.3,16.7 98.8,13.0 106.3,10.9 113.9,18.3 121.4,18.5 128.9,20.9 136.4,23.4 144.0,24.0 151.5,21.6 159.0,22.6" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="ex">Second-biggest crypto; moves with Bitcoin but more volatile.</div>
+      <div class="asof">as of Oct 28 08:47 AM ET · CoinGecko (24h change)</div>
+    </div>
+  
+  </div>
+  <div class="card" style="margin-top:10px;font-size:13.5px"><b>How to read it today:</b> SPY closed at $769.66 and futures point to an open near $771, right at Tuesday's high ($771.14). Mancini's range target (7,783–7,803) is close, so the easy part of the move is done. We only buy a pullback to support, not the gap. Bitcoin is lifting off its range low but hasn't proven anything yet.</div>
+</section>
+
+
+<section>
+  <div class="sh"><span class="num">02</span><h3>Overnight &amp; today's catalysts</h3></div>
+  <div class="wtm"><b>What this means:</b> Catalysts are scheduled events or news that can suddenly move prices. Know the times so you are not surprised mid-trade. All times ET.</div>
+  <div class="cols2">
+    <div class="card">
+      <div class="lbl" style="margin-bottom:4px">Economic calendar</div>
+      <ul class="tl"><li><span class="tm">9:30 AM</span><div><span class="ev">Open near Tuesday&#39;s high</span><span class="imp imp-high">HIGH</span><div class="why">Gaps into resistance often fade first. <b>No entries before 10:00.</b></div></div></li><li><span class="tm">All morning</span><div><span class="ev">Pre-Fed drift</span><span class="imp imp-med">MED</span><div class="why">Fed days are often quiet and choppy until 2:00. Small moves, small size, quick exits.</div></div></li><li><span class="tm">2:00 PM</span><div><span class="ev">Fed rate decision</span><span class="imp imp-high">HIGH</span><div class="why">Hold expected (~92%). <b>We are flat by 1:30.</b> Never hold short-dated options through it.</div></div></li><li><span class="tm">2:30 PM</span><div><span class="ev">Chair Warsh press conference</span><span class="imp imp-high">HIGH</span><div class="why">Hints about a December hike can move stocks 1%+ in minutes. Watch, don't trade.</div></div></li><li><span class="tm">After close</span><div><span class="ev">Microsoft, Alphabet, ServiceNow earnings</span><span class="imp imp-high">HIGH</span><div class="why">The AI-spending story on trial. Can gap QQQ and chips tomorrow.</div></div></li><li><span class="tm">Thu Oct 29</span><div><span class="ev">Amazon and Intel earnings, PCE inflation</span><span class="imp imp-high">HIGH</span><div class="why">More big-tech results plus the Fed's favorite inflation gauge.</div></div></li></ul>
+      <div class="lbl" style="margin:12px 0 4px">Earnings of note</div>
+      <ul class="tl"><li><span class="tm">SK Hynix → MU / ARM / AMD</span><div><span class="ev">Overnight</span><div class="why">Record memory-chip profits lifted Micron ~4% and other chip names ~2% premarket. Gaps we don't chase.</div></div></li><li><span class="tm">GOOGL / MSFT</span><div><span class="ev">After close</span><div class="why">Alphabet +1% premarket, Microsoft slightly lower. No new tech swing trades before they report.</div></div></li><li><span class="tm">F / GEV / TMUS / EBAY / CMG / NOW</span><div><span class="ev">Today</span><div class="why">Busy earnings day. Single-stock gambles, not our trade.</div></div></li><li><span class="tm">AMZN / INTC</span><div><span class="ev">Thursday</span><div class="why">Next round of the AI test.</div></div></li></ul>
+    </div>
+    <div class="news">
+      <div class="lbl">Overnight headlines</div>
+      <div class="nw"><div class="hd">Dow futures fall, S&amp;P 500 and Nasdaq futures climb ahead of Fed decision, Big Tech earnings</div><div class="so"><b class="gold">So what:</b> S&P futures +0.1%, Nasdaq +0.4%. Chips up again on SK Hynix's record quarter.</div><div class="src"><a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-28-dow-sp-500-nasdaq-fed-meeting-decision-080642111.html" target="_blank" rel="noopener">Yahoo Finance, Oct 28</a></div></div><div class="nw"><div class="hd">Alphabet, Microsoft to report; Fed decision ahead: what&#39;s moving markets</div><div class="so"><b class="gold">So what:</b> A hold is expected, but markets see a ~3-in-4 chance of a December hike. Warsh's tone is the swing factor.</div><div class="src"><a href="https://www.investing.com/news/economy-news/alphabet-microsoft-to-report-fed-decision-ahead--whats-moving-markets-4977796" target="_blank" rel="noopener">Investing.com, Oct 28</a></div></div><div class="nw"><div class="hd">Investors brace for a hawkish hold and tech on tap</div><div class="so"><b class="gold">So what:</b> 'Hawkish hold' = no change today, but tough talk about future hikes. That's the risk for tech.</div><div class="src"><a href="https://www.cnbc.com/2026/10/28/investors-brace-for-a-hawkish-hold-and-tech-on-tap.html" target="_blank" rel="noopener">CNBC, Oct 28</a></div></div><div class="nw"><div class="hd">Wall Street&#39;s Wednesday has two tests: the Fed at 2 p.m., then Alphabet and Microsoft</div><div class="so"><b class="gold">So what:</b> CME FedWatch puts a hold at ~92%. Micron +4%, Arm +2% premarket.</div><div class="src"><a href="https://qz.com/fed-decision-alphabet-microsoft-earnings-wall-street-102826" target="_blank" rel="noopener">Quartz, Oct 28</a></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="sh"><span class="num">03</span><h3>Sector strength</h3></div>
+  <div class="wtm"><b>What this means:</b> Money rotates between industries. The traders we study go "top-down": check the market, find the strongest sector, then trade that sector's leading stocks. Ranked by last 5 trading days.</div>
+  <div class="card" style="padding:8px 12px">
+    <div class="sect head"><span>#</span><span>Sector</span><span>5-day move</span><span class="c-d1">1-day</span><span>5-day</span><span class="c-m1">1-month</span><span>Trend</span><span class="c-sp">1-month</span></div>
+    
+    <div class="sect top3">
+      <span class="rk">1</span>
+      <span><span class="tk">CIBR</span><span class="sn">Cybersecurity</span></span>
+      <span class="bar"><i style="width:100%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+1.1%</span>
+      <span class="mono up" style="font-weight:700">+9.2%</span>
+      <span class="mono c-m1 up">+7.8%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g53116356" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,15.4 L4.7,14.9 L8.4,13.1 L12.1,12.0 L15.9,10.5 L19.6,8.4 L23.3,5.0 L27.0,7.5 L30.7,8.1 L34.4,2.0 L38.1,5.5 L41.9,6.1 L45.6,12.1 L49.3,12.4 L53.0,20.0 L56.7,18.2 L60.4,17.5 L64.1,13.1 L67.9,13.6 L71.6,8.2 L75.3,4.5 L79.0,2.6 L79,21 Z" fill="url(#g53116356)"/><polyline points="1.0,15.4 4.7,14.9 8.4,13.1 12.1,12.0 15.9,10.5 19.6,8.4 23.3,5.0 27.0,7.5 30.7,8.1 34.4,2.0 38.1,5.5 41.9,6.1 45.6,12.1 49.3,12.4 53.0,20.0 56.7,18.2 60.4,17.5 64.1,13.1 67.9,13.6 71.6,8.2 75.3,4.5 79.0,2.6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect top3">
+      <span class="rk">2</span>
+      <span><span class="tk">DRAM</span><span class="sn">Memory chips</span></span>
+      <span class="bar"><i style="width:64%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+4.5%</span>
+      <span class="mono up" style="font-weight:700">+5.9%</span>
+      <span class="mono c-m1 dn">-15.4%</span>
+      <span class="trend tr-Choppy">Choppy</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g25091605" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,4.6 L4.7,2.8 L8.4,3.8 L12.1,2.0 L15.9,2.3 L19.6,2.4 L23.3,4.8 L27.0,4.2 L30.7,7.6 L34.4,7.3 L38.1,10.0 L41.9,12.1 L45.6,15.1 L49.3,16.0 L53.0,19.2 L56.7,17.1 L60.4,17.8 L64.1,16.2 L67.9,20.0 L71.6,18.5 L75.3,17.1 L79.0,14.7 L79,21 Z" fill="url(#g25091605)"/><polyline points="1.0,4.6 4.7,2.8 8.4,3.8 12.1,2.0 15.9,2.3 19.6,2.4 23.3,4.8 27.0,4.2 30.7,7.6 34.4,7.3 38.1,10.0 41.9,12.1 45.6,15.1 49.3,16.0 53.0,19.2 56.7,17.1 60.4,17.8 64.1,16.2 67.9,20.0 71.6,18.5 75.3,17.1 79.0,14.7" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect top3">
+      <span class="rk">3</span>
+      <span><span class="tk">IGV</span><span class="sn">Software</span></span>
+      <span class="bar"><i style="width:49%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+0.4%</span>
+      <span class="mono up" style="font-weight:700">+4.5%</span>
+      <span class="mono c-m1 up">+6.0%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g7158434" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,17.6 L4.7,18.1 L8.4,15.4 L12.1,11.6 L15.9,11.2 L19.6,8.4 L23.3,5.3 L27.0,8.1 L30.7,8.7 L34.4,2.0 L38.1,5.0 L41.9,5.7 L45.6,12.8 L49.3,8.6 L53.0,20.0 L56.7,16.4 L60.4,14.4 L64.1,10.3 L67.9,10.5 L71.6,6.5 L75.3,4.8 L79.0,3.9 L79,21 Z" fill="url(#g7158434)"/><polyline points="1.0,17.6 4.7,18.1 8.4,15.4 12.1,11.6 15.9,11.2 19.6,8.4 23.3,5.3 27.0,8.1 30.7,8.7 34.4,2.0 38.1,5.0 41.9,5.7 45.6,12.8 49.3,8.6 53.0,20.0 56.7,16.4 60.4,14.4 64.1,10.3 67.9,10.5 71.6,6.5 75.3,4.8 79.0,3.9" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">4</span>
+      <span><span class="tk">ITB</span><span class="sn">Homebuilders</span></span>
+      <span class="bar"><i style="width:38%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+0.5%</span>
+      <span class="mono up" style="font-weight:700">+3.5%</span>
+      <span class="mono c-m1 up">+1.8%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g96058329" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,7.7 L4.7,8.6 L8.4,11.7 L12.1,10.9 L15.9,12.5 L19.6,15.0 L23.3,11.8 L27.0,17.0 L30.7,14.3 L34.4,16.9 L38.1,18.6 L41.9,17.1 L45.6,20.0 L49.3,12.3 L53.0,13.1 L56.7,16.4 L60.4,11.0 L64.1,12.7 L67.9,2.0 L71.6,3.5 L75.3,5.1 L79.0,4.0 L79,21 Z" fill="url(#g96058329)"/><polyline points="1.0,7.7 4.7,8.6 8.4,11.7 12.1,10.9 15.9,12.5 19.6,15.0 23.3,11.8 27.0,17.0 30.7,14.3 34.4,16.9 38.1,18.6 41.9,17.1 45.6,20.0 49.3,12.3 53.0,13.1 56.7,16.4 60.4,11.0 64.1,12.7 67.9,2.0 71.6,3.5 75.3,5.1 79.0,4.0" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">5</span>
+      <span><span class="tk">XLU</span><span class="sn">Utilities</span></span>
+      <span class="bar"><i style="width:25%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+0.7%</span>
+      <span class="mono up" style="font-weight:700">+2.3%</span>
+      <span class="mono c-m1 up">+9.2%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g580874" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,20.0 L4.7,17.7 L8.4,19.1 L12.1,17.9 L15.9,17.1 L19.6,16.4 L23.3,10.5 L27.0,10.6 L30.7,11.0 L34.4,9.3 L38.1,8.2 L41.9,7.0 L45.6,7.7 L49.3,8.1 L53.0,5.3 L56.7,9.5 L60.4,6.9 L64.1,6.3 L67.9,2.0 L71.6,3.5 L75.3,3.6 L79.0,2.1 L79,21 Z" fill="url(#g580874)"/><polyline points="1.0,20.0 4.7,17.7 8.4,19.1 12.1,17.9 15.9,17.1 19.6,16.4 23.3,10.5 27.0,10.6 30.7,11.0 34.4,9.3 38.1,8.2 41.9,7.0 45.6,7.7 49.3,8.1 53.0,5.3 56.7,9.5 60.4,6.9 64.1,6.3 67.9,2.0 71.6,3.5 75.3,3.6 79.0,2.1" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">6</span>
+      <span><span class="tk">XLK</span><span class="sn">Technology</span></span>
+      <span class="bar"><i style="width:24%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+1.7%</span>
+      <span class="mono up" style="font-weight:700">+2.2%</span>
+      <span class="mono c-m1 dn">-2.6%</span>
+      <span class="trend tr-Choppy">Choppy</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g38209836" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,8.8 L4.7,8.9 L8.4,7.7 L12.1,5.8 L15.9,4.0 L19.6,3.0 L23.3,2.0 L27.0,2.6 L30.7,5.9 L34.4,4.9 L38.1,7.2 L41.9,7.2 L45.6,12.6 L49.3,13.7 L53.0,19.0 L56.7,16.7 L60.4,17.2 L64.1,14.3 L67.9,20.0 L71.6,19.2 L75.3,16.4 L79.0,13.5 L79,21 Z" fill="url(#g38209836)"/><polyline points="1.0,8.8 4.7,8.9 8.4,7.7 12.1,5.8 15.9,4.0 19.6,3.0 23.3,2.0 27.0,2.6 30.7,5.9 34.4,4.9 38.1,7.2 41.9,7.2 45.6,12.6 49.3,13.7 53.0,19.0 56.7,16.7 60.4,17.2 64.1,14.3 67.9,20.0 71.6,19.2 75.3,16.4 79.0,13.5" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">7</span>
+      <span><span class="tk">SMH</span><span class="sn">Semiconductors (chips)</span></span>
+      <span class="bar"><i style="width:23%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+3.0%</span>
+      <span class="mono up" style="font-weight:700">+2.1%</span>
+      <span class="mono c-m1 dn">-7.0%</span>
+      <span class="trend tr-Choppy">Choppy</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g92673904" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,7.5 L4.7,6.4 L8.4,6.1 L12.1,4.6 L15.9,2.5 L19.6,2.0 L23.3,2.2 L27.0,3.4 L30.7,6.3 L34.4,7.0 L38.1,9.0 L41.9,9.5 L45.6,13.3 L49.3,14.2 L53.0,17.3 L56.7,15.9 L60.4,16.3 L64.1,14.6 L67.9,20.0 L71.6,19.4 L75.3,17.0 L79.0,14.4 L79,21 Z" fill="url(#g92673904)"/><polyline points="1.0,7.5 4.7,6.4 8.4,6.1 12.1,4.6 15.9,2.5 19.6,2.0 23.3,2.2 27.0,3.4 30.7,6.3 34.4,7.0 38.1,9.0 41.9,9.5 45.6,13.3 49.3,14.2 53.0,17.3 56.7,15.9 60.4,16.3 64.1,14.6 67.9,20.0 71.6,19.4 75.3,17.0 79.0,14.4" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">8</span>
+      <span><span class="tk">ARKK</span><span class="sn">Innovation (ARK)</span></span>
+      <span class="bar"><i style="width:18%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+3.6%</span>
+      <span class="mono up" style="font-weight:700">+1.6%</span>
+      <span class="mono c-m1 dn">-5.0%</span>
+      <span class="trend tr-Choppy">Choppy</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g54168516" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,7.7 L4.7,7.4 L8.4,8.0 L12.1,8.8 L15.9,6.8 L19.6,2.0 L23.3,5.7 L27.0,9.2 L30.7,10.4 L34.4,7.1 L38.1,9.7 L41.9,11.1 L45.6,15.4 L49.3,13.5 L53.0,20.0 L56.7,18.9 L60.4,17.1 L64.1,13.9 L67.9,19.7 L71.6,19.5 L75.3,19.7 L79.0,14.9 L79,21 Z" fill="url(#g54168516)"/><polyline points="1.0,7.7 4.7,7.4 8.4,8.0 12.1,8.8 15.9,6.8 19.6,2.0 23.3,5.7 27.0,9.2 30.7,10.4 34.4,7.1 38.1,9.7 41.9,11.1 45.6,15.4 49.3,13.5 53.0,20.0 56.7,18.9 60.4,17.1 64.1,13.9 67.9,19.7 71.6,19.5 75.3,19.7 79.0,14.9" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">9</span>
+      <span><span class="tk">XLB</span><span class="sn">Materials</span></span>
+      <span class="bar"><i style="width:12%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+0.8%</span>
+      <span class="mono up" style="font-weight:700">+1.1%</span>
+      <span class="mono c-m1 up">+4.7%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g30181146" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,14.8 L4.7,16.9 L8.4,19.1 L12.1,20.0 L15.9,18.2 L19.6,14.7 L23.3,13.4 L27.0,17.6 L30.7,15.9 L34.4,15.1 L38.1,15.0 L41.9,13.4 L45.6,13.7 L49.3,8.8 L53.0,6.8 L56.7,6.6 L60.4,5.1 L64.1,4.6 L67.9,2.5 L71.6,4.6 L75.3,4.2 L79.0,2.0 L79,21 Z" fill="url(#g30181146)"/><polyline points="1.0,14.8 4.7,16.9 8.4,19.1 12.1,20.0 15.9,18.2 19.6,14.7 23.3,13.4 27.0,17.6 30.7,15.9 34.4,15.1 38.1,15.0 41.9,13.4 45.6,13.7 49.3,8.8 53.0,6.8 56.7,6.6 60.4,5.1 64.1,4.6 67.9,2.5 71.6,4.6 75.3,4.2 79.0,2.0" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">10</span>
+      <span><span class="tk">XLI</span><span class="sn">Industrials</span></span>
+      <span class="bar"><i style="width:7%;background:var(--up)"></i></span>
+      <span class="mono c-d1 up">+0.6%</span>
+      <span class="mono up" style="font-weight:700">+0.7%</span>
+      <span class="mono c-m1 dn">-0.5%</span>
+      <span class="trend tr-Choppy">Choppy</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g42855057" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,9.2 L4.7,8.3 L8.4,13.9 L12.1,9.6 L15.9,6.2 L19.6,5.8 L23.3,2.0 L27.0,11.7 L30.7,10.2 L34.4,8.0 L38.1,8.3 L41.9,9.5 L45.6,13.7 L49.3,11.5 L53.0,11.9 L56.7,14.7 L60.4,14.4 L64.1,10.5 L67.9,14.5 L71.6,20.0 L75.3,13.9 L79.0,11.5 L79,21 Z" fill="url(#g42855057)"/><polyline points="1.0,9.2 4.7,8.3 8.4,13.9 12.1,9.6 15.9,6.2 19.6,5.8 23.3,2.0 27.0,11.7 30.7,10.2 34.4,8.0 38.1,8.3 41.9,9.5 45.6,13.7 49.3,11.5 53.0,11.9 56.7,14.7 60.4,14.4 64.1,10.5 67.9,14.5 71.6,20.0 75.3,13.9 79.0,11.5" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">11</span>
+      <span><span class="tk">XLE</span><span class="sn">Energy / oil</span></span>
+      <span class="bar"><i style="width:4%;background:var(--up)"></i></span>
+      <span class="mono c-d1 dn">-2.1%</span>
+      <span class="mono up" style="font-weight:700">+0.4%</span>
+      <span class="mono c-m1 up">+9.8%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g29758369" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,18.7 L4.7,19.9 L8.4,20.0 L12.1,17.3 L15.9,17.1 L19.6,15.7 L23.3,15.0 L27.0,15.9 L30.7,11.7 L34.4,12.1 L38.1,10.0 L41.9,7.4 L45.6,6.4 L49.3,8.8 L53.0,5.1 L56.7,6.1 L60.4,5.7 L64.1,5.3 L67.9,6.6 L71.6,2.7 L75.3,2.0 L79.0,5.2 L79,21 Z" fill="url(#g29758369)"/><polyline points="1.0,18.7 4.7,19.9 8.4,20.0 12.1,17.3 15.9,17.1 19.6,15.7 23.3,15.0 27.0,15.9 30.7,11.7 34.4,12.1 38.1,10.0 41.9,7.4 45.6,6.4 49.3,8.8 53.0,5.1 56.7,6.1 60.4,5.7 64.1,5.3 67.9,6.6 71.6,2.7 75.3,2.0 79.0,5.2" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">12</span>
+      <span><span class="tk">XLF</span><span class="sn">Financials / banks</span></span>
+      <span class="bar"><i style="width:3%;background:var(--up)"></i></span>
+      <span class="mono c-d1 dn">-0.2%</span>
+      <span class="mono up" style="font-weight:700">+0.3%</span>
+      <span class="mono c-m1 up">+3.1%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g6202812" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,15.6 L4.7,16.6 L8.4,20.0 L12.1,19.7 L15.9,19.5 L19.6,17.3 L23.3,16.6 L27.0,18.1 L30.7,15.4 L34.4,12.6 L38.1,10.9 L41.9,12.1 L45.6,13.8 L49.3,9.6 L53.0,8.3 L56.7,10.8 L60.4,7.2 L64.1,5.4 L67.9,2.0 L71.6,6.2 L75.3,5.5 L79.0,6.3 L79,21 Z" fill="url(#g6202812)"/><polyline points="1.0,15.6 4.7,16.6 8.4,20.0 12.1,19.7 15.9,19.5 19.6,17.3 23.3,16.6 27.0,18.1 30.7,15.4 34.4,12.6 38.1,10.9 41.9,12.1 45.6,13.8 49.3,9.6 53.0,8.3 56.7,10.8 60.4,7.2 64.1,5.4 67.9,2.0 71.6,6.2 75.3,5.5 79.0,6.3" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">13</span>
+      <span><span class="tk">XLRE</span><span class="sn">Real estate</span></span>
+      <span class="bar"><i style="width:2%;background:var(--up)"></i></span>
+      <span class="mono c-d1 dn">-0.8%</span>
+      <span class="mono up" style="font-weight:700">+0.1%</span>
+      <span class="mono c-m1 up">+2.6%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g61469303" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,13.7 L4.7,13.8 L8.4,17.3 L12.1,19.1 L15.9,18.1 L19.6,19.2 L23.3,15.7 L27.0,20.0 L30.7,17.7 L34.4,11.6 L38.1,9.1 L41.9,9.8 L45.6,12.6 L49.3,8.5 L53.0,7.2 L56.7,11.1 L60.4,5.4 L64.1,8.0 L67.9,4.3 L71.6,3.9 L75.3,2.0 L79.0,4.9 L79,21 Z" fill="url(#g61469303)"/><polyline points="1.0,13.7 4.7,13.8 8.4,17.3 12.1,19.1 15.9,18.1 19.6,19.2 23.3,15.7 27.0,20.0 30.7,17.7 34.4,11.6 38.1,9.1 41.9,9.8 45.6,12.6 49.3,8.5 53.0,7.2 56.7,11.1 60.4,5.4 64.1,8.0 67.9,4.3 71.6,3.9 75.3,2.0 79.0,4.9" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">14</span>
+      <span><span class="tk">XLY</span><span class="sn">Consumer discretionary</span></span>
+      <span class="bar"><i style="width:0%;background:var(--dn)"></i></span>
+      <span class="mono c-d1 up">+1.0%</span>
+      <span class="mono dn" style="font-weight:700">+0.0%</span>
+      <span class="mono c-m1 up">+5.9%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g21161689" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,19.5 L4.7,19.1 L8.4,19.9 L12.1,20.0 L15.9,16.7 L19.6,15.7 L23.3,12.2 L27.0,13.2 L30.7,12.2 L34.4,9.2 L38.1,10.7 L41.9,10.5 L45.6,12.8 L49.3,7.7 L53.0,10.2 L56.7,4.9 L60.4,2.1 L64.1,2.0 L67.9,3.4 L71.6,8.5 L75.3,5.4 L79.0,2.2 L79,21 Z" fill="url(#g21161689)"/><polyline points="1.0,19.5 4.7,19.1 8.4,19.9 12.1,20.0 15.9,16.7 19.6,15.7 23.3,12.2 27.0,13.2 30.7,12.2 34.4,9.2 38.1,10.7 41.9,10.5 45.6,12.8 49.3,7.7 53.0,10.2 56.7,4.9 60.4,2.1 64.1,2.0 67.9,3.4 71.6,8.5 75.3,5.4 79.0,2.2" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">15</span>
+      <span><span class="tk">XLV</span><span class="sn">Health care</span></span>
+      <span class="bar"><i style="width:4%;background:var(--dn)"></i></span>
+      <span class="mono c-d1 dn">-0.1%</span>
+      <span class="mono dn" style="font-weight:700">-0.4%</span>
+      <span class="mono c-m1 up">+4.6%</span>
+      <span class="trend tr-Uptrend">Uptrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g75910570" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,14.0 L4.7,14.6 L8.4,17.3 L12.1,20.0 L15.9,20.0 L19.6,18.6 L23.3,18.9 L27.0,16.9 L30.7,17.6 L34.4,14.5 L38.1,13.1 L41.9,15.9 L45.6,10.7 L49.3,6.9 L53.0,7.5 L56.7,8.7 L60.4,3.8 L64.1,4.8 L67.9,2.0 L71.6,4.4 L75.3,4.4 L79.0,4.5 L79,21 Z" fill="url(#g75910570)"/><polyline points="1.0,14.0 4.7,14.6 8.4,17.3 12.1,20.0 15.9,20.0 19.6,18.6 23.3,18.9 27.0,16.9 30.7,17.6 34.4,14.5 38.1,13.1 41.9,15.9 45.6,10.7 49.3,6.9 53.0,7.5 56.7,8.7 60.4,3.8 64.1,4.8 67.9,2.0 71.6,4.4 75.3,4.4 79.0,4.5" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">16</span>
+      <span><span class="tk">XLP</span><span class="sn">Consumer staples</span></span>
+      <span class="bar"><i style="width:7%;background:var(--dn)"></i></span>
+      <span class="mono c-d1 dn">-0.9%</span>
+      <span class="mono dn" style="font-weight:700">-0.7%</span>
+      <span class="mono c-m1 up">+5.9%</span>
+      <span class="trend tr-Choppy">Choppy</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g75191992" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,16.4 L4.7,17.2 L8.4,19.5 L12.1,20.0 L15.9,19.6 L19.6,18.7 L23.3,17.3 L27.0,17.4 L30.7,14.2 L34.4,14.2 L38.1,12.4 L41.9,12.8 L45.6,9.3 L49.3,8.2 L53.0,6.4 L56.7,7.2 L60.4,6.2 L64.1,7.4 L67.9,2.0 L71.6,5.2 L75.3,5.8 L79.0,7.3 L79,21 Z" fill="url(#g75191992)"/><polyline points="1.0,16.4 4.7,17.2 8.4,19.5 12.1,20.0 15.9,19.6 19.6,18.7 23.3,17.3 27.0,17.4 30.7,14.2 34.4,14.2 38.1,12.4 41.9,12.8 45.6,9.3 49.3,8.2 53.0,6.4 56.7,7.2 60.4,6.2 64.1,7.4 67.9,2.0 71.6,5.2 75.3,5.8 79.0,7.3" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">17</span>
+      <span><span class="tk">BITQ</span><span class="sn">Crypto stocks</span></span>
+      <span class="bar"><i style="width:31%;background:var(--dn)"></i></span>
+      <span class="mono c-d1 up">+3.0%</span>
+      <span class="mono dn" style="font-weight:700">-2.8%</span>
+      <span class="mono c-m1 dn">-20.5%</span>
+      <span class="trend tr-Downtrend">Downtrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g10345794" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,2.0 L4.7,2.9 L8.4,4.7 L12.1,4.5 L15.9,5.0 L19.6,4.3 L23.3,4.6 L27.0,7.8 L30.7,9.7 L34.4,8.2 L38.1,9.7 L41.9,10.6 L45.6,14.9 L49.3,12.0 L53.0,16.7 L56.7,17.7 L60.4,16.3 L64.1,14.0 L67.9,17.4 L71.6,18.9 L75.3,20.0 L79.0,18.2 L79,21 Z" fill="url(#g10345794)"/><polyline points="1.0,2.0 4.7,2.9 8.4,4.7 12.1,4.5 15.9,5.0 19.6,4.3 23.3,4.6 27.0,7.8 30.7,9.7 34.4,8.2 38.1,9.7 41.9,10.6 45.6,14.9 49.3,12.0 53.0,16.7 56.7,17.7 60.4,16.3 64.1,14.0 67.9,17.4 71.6,18.9 75.3,20.0 79.0,18.2" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+    <div class="sect ">
+      <span class="rk">18</span>
+      <span><span class="tk">XLC</span><span class="sn">Communication / media</span></span>
+      <span class="bar"><i style="width:65%;background:var(--dn)"></i></span>
+      <span class="mono c-d1 dn">-0.3%</span>
+      <span class="mono dn" style="font-weight:700">-6.0%</span>
+      <span class="mono c-m1 dn">-6.8%</span>
+      <span class="trend tr-Downtrend">Downtrend</span>
+      <span class="c-sp"><svg class="spark" viewBox="0 0 80 22" width="80" height="22" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g15361399" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171" stop-opacity=".28"/><stop offset="1" stop-color="#f87171" stop-opacity="0"/></linearGradient></defs><path d="M1,21 L1.0,4.6 L4.7,4.0 L8.4,5.0 L12.1,7.1 L15.9,6.3 L19.6,3.7 L23.3,3.6 L27.0,4.4 L30.7,2.8 L34.4,6.2 L38.1,4.0 L41.9,2.3 L45.6,5.3 L49.3,2.0 L53.0,6.3 L56.7,6.8 L60.4,6.6 L64.1,9.0 L67.9,12.2 L71.6,16.1 L75.3,19.5 L79.0,20.0 L79,21 Z" fill="url(#g15361399)"/><polyline points="1.0,4.6 4.7,4.0 8.4,5.0 12.1,7.1 15.9,6.3 19.6,3.7 23.3,3.6 27.0,4.4 30.7,2.8 34.4,6.2 38.1,4.0 41.9,2.3 45.6,5.3 49.3,2.0 53.0,6.3 56.7,6.8 60.4,6.6 64.1,9.0 67.9,12.2 71.6,16.1 75.3,19.5 79.0,20.0" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    </div>
+    
+  </div>
+  <div class="card" style="margin-top:10px;font-size:13.5px"><b>Top-down read:</b> cybersecurity (CIBR) and software (IGV) lead over five days, and memory chips (DRAM) and SMH jumped Tuesday. But chips are still below where they were a month ago, and Microsoft and Alphabet report tonight. So no individual tech stocks today. If we trade, it's the broad <b>SPY</b>, small and early.</div>
+  <div class="sub" style="margin-top:6px;font-size:12px">Trend tag: "Uptrend" = price above its 8-day and 21-day average (short-term buyers in control). "Downtrend" = below both. "Choppy" = mixed.</div>
+</section>
+
+
+<section>
+  <div class="sh"><span class="num">04</span><h3>Key levels map</h3></div>
+  <div class="wtm"><b>What this means:</b> Levels are prices where buyers or sellers showed up before. Above yesterday's high we only look to buy; below yesterday's low we only look to sell; in between, we usually wait. This is the core of the "break and retest" method.</div>
+  <div class="lvgrid">
+  
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><b class="mono" style="font-size:16px">SPY</b><span class="mono">771.26</span></div>
+      <div class="zone z-up">ABOVE yesterday&#39;s high</div><div class="sub">Buyers in control: only look for longs (buys).</div>
+      <svg class="ladder" viewBox="0 0 340 240" width="100%" style="max-width:520px" preserveAspectRatio="xMidYMid meet"><line x1="76" x2="334" y1="25.6" y2="25.6" stroke="#d4af37" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,25.6 L76,25.6" stroke="#d4af37" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="147.3" y2="147.3" stroke="#f8fafc" stroke-width="2"/><circle cx="82" cy="147.3" r="4" fill="#f8fafc"/><path d="M70,147.3 L76,147.3" stroke="#f8fafc" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="148.7" y2="148.7" stroke="#34d399" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,163.3 L76,148.7" stroke="#34d399" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="166.1" y2="166.1" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,179.3 L76,166.1" stroke="#94a3b8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="178.6" y2="178.6" stroke="#818cf8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,195.3 L76,178.6" stroke="#818cf8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="192.8" y2="192.8" stroke="#2dd4bf" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,211.3 L76,192.8" stroke="#2dd4bf" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="218.4" y2="218.4" stroke="#f87171" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,227.3 L76,218.4" stroke="#f87171" stroke-width=".8" opacity=".6"/><text x="66" y="29.1" text-anchor="end" class="lv-num" fill="#d4af37">781.62</text><rect x="225.2" y="18.1" width="108.8" height="14" rx="3" fill="#0c1322"/><text x="330" y="29.1" text-anchor="end" class="lv-lab" fill="#d4af37">Record / 3-mo high</text><text x="66" y="150.8" text-anchor="end" class="lv-now" fill="#f8fafc">771.26</text><rect x="268.4" y="139.8" width="65.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="150.8" text-anchor="end" class="lv-now" fill="#f8fafc">PRICE NOW</text><text x="66" y="166.8" text-anchor="end" class="lv-num" fill="#34d399">771.14</text><rect x="236.4" y="155.8" width="97.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="166.8" text-anchor="end" class="lv-lab" fill="#34d399">Yesterday&#x27;s high</text><text x="66" y="182.8" text-anchor="end" class="lv-num" fill="#94a3b8">769.66</text><rect x="230.8" y="171.8" width="103.2" height="14" rx="3" fill="#0c1322"/><text x="330" y="182.8" text-anchor="end" class="lv-lab" fill="#94a3b8">Yesterday&#x27;s close</text><text x="66" y="198.8" text-anchor="end" class="lv-num" fill="#818cf8">768.60</text><rect x="270.0" y="187.8" width="64.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="198.8" text-anchor="end" class="lv-lab" fill="#818cf8">21-day EMA</text><text x="66" y="214.8" text-anchor="end" class="lv-num" fill="#2dd4bf">767.39</text><rect x="275.6" y="203.8" width="58.4" height="14" rx="3" fill="#0c1322"/><text x="330" y="214.8" text-anchor="end" class="lv-lab" fill="#2dd4bf">8-day EMA</text><text x="66" y="230.8" text-anchor="end" class="lv-num" fill="#f87171">765.21</text><rect x="242.0" y="219.8" width="92.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="230.8" text-anchor="end" class="lv-lab" fill="#f87171">Yesterday&#x27;s low</text></svg>
+    </div>
+  
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><b class="mono" style="font-size:16px">QQQ</b><span class="mono">723.67</span></div>
+      <div class="zone z-up">ABOVE yesterday&#39;s high</div><div class="sub">Buyers in control: only look for longs (buys).</div>
+      <svg class="ladder" viewBox="0 0 340 240" width="100%" style="max-width:520px" preserveAspectRatio="xMidYMid meet"><line x1="76" x2="334" y1="25.6" y2="25.6" stroke="#d4af37" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,3.6 L76,25.6" stroke="#d4af37" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="171.9" y2="171.9" stroke="#818cf8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,150.0 L76,171.9" stroke="#818cf8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="179.0" y2="179.0" stroke="#f8fafc" stroke-width="2"/><circle cx="82" cy="179.0" r="4" fill="#f8fafc"/><path d="M70,166.0 L76,179.0" stroke="#f8fafc" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="182.1" y2="182.1" stroke="#34d399" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,182.0 L76,182.1" stroke="#34d399" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="188.4" y2="188.4" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,198.0 L76,188.4" stroke="#94a3b8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="202.3" y2="202.3" stroke="#2dd4bf" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,214.0 L76,202.3" stroke="#2dd4bf" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="218.4" y2="218.4" stroke="#f87171" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,230.0 L76,218.4" stroke="#f87171" stroke-width=".8" opacity=".6"/><text x="66" y="7.1" text-anchor="end" class="lv-num" fill="#d4af37">762.86</text><rect x="225.2" y="-3.9" width="108.8" height="14" rx="3" fill="#0c1322"/><text x="330" y="7.1" text-anchor="end" class="lv-lab" fill="#d4af37">Record / 3-mo high</text><text x="66" y="153.5" text-anchor="end" class="lv-num" fill="#818cf8">725.46</text><rect x="270.0" y="142.5" width="64.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="153.5" text-anchor="end" class="lv-lab" fill="#818cf8">21-day EMA</text><text x="66" y="169.5" text-anchor="end" class="lv-now" fill="#f8fafc">723.67</text><rect x="268.4" y="158.5" width="65.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="169.5" text-anchor="end" class="lv-now" fill="#f8fafc">PRICE NOW</text><text x="66" y="185.5" text-anchor="end" class="lv-num" fill="#34d399">722.87</text><rect x="236.4" y="174.5" width="97.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="185.5" text-anchor="end" class="lv-lab" fill="#34d399">Yesterday&#x27;s high</text><text x="66" y="201.5" text-anchor="end" class="lv-num" fill="#94a3b8">721.25</text><rect x="230.8" y="190.5" width="103.2" height="14" rx="3" fill="#0c1322"/><text x="330" y="201.5" text-anchor="end" class="lv-lab" fill="#94a3b8">Yesterday&#x27;s close</text><text x="66" y="217.5" text-anchor="end" class="lv-num" fill="#2dd4bf">717.70</text><rect x="275.6" y="206.5" width="58.4" height="14" rx="3" fill="#0c1322"/><text x="330" y="217.5" text-anchor="end" class="lv-lab" fill="#2dd4bf">8-day EMA</text><text x="66" y="233.5" text-anchor="end" class="lv-num" fill="#f87171">713.59</text><rect x="242.0" y="222.5" width="92.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="233.5" text-anchor="end" class="lv-lab" fill="#f87171">Yesterday&#x27;s low</text></svg>
+    </div>
+  
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><b class="mono" style="font-size:16px">SMH</b><span class="mono">563.85</span></div>
+      <div class="zone z-up">ABOVE yesterday&#39;s high</div><div class="sub">Buyers in control: only look for longs (buys).</div>
+      <svg class="ladder" viewBox="0 0 340 240" width="100%" style="max-width:520px" preserveAspectRatio="xMidYMid meet"><line x1="76" x2="334" y1="25.6" y2="25.6" stroke="#d4af37" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,-2.7 L76,25.6" stroke="#d4af37" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="178.3" y2="178.3" stroke="#818cf8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,150.0 L76,178.3" stroke="#818cf8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="182.7" y2="182.7" stroke="#f8fafc" stroke-width="2"/><circle cx="82" cy="182.7" r="4" fill="#f8fafc"/><path d="M70,166.0 L76,182.7" stroke="#f8fafc" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="191.1" y2="191.1" stroke="#34d399" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,182.0 L76,191.1" stroke="#34d399" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="194.9" y2="194.9" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,198.0 L76,194.9" stroke="#94a3b8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="212.9" y2="212.9" stroke="#2dd4bf" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,214.0 L76,212.9" stroke="#2dd4bf" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="218.4" y2="218.4" stroke="#f87171" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,230.0 L76,218.4" stroke="#f87171" stroke-width=".8" opacity=".6"/><text x="66" y="0.8" text-anchor="end" class="lv-num" fill="#d4af37">639.47</text><rect x="225.2" y="-10.2" width="108.8" height="14" rx="3" fill="#0c1322"/><text x="330" y="0.8" text-anchor="end" class="lv-lab" fill="#d4af37">Record / 3-mo high</text><text x="66" y="153.5" text-anchor="end" class="lv-num" fill="#818cf8">565.99</text><rect x="270.0" y="142.5" width="64.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="153.5" text-anchor="end" class="lv-lab" fill="#818cf8">21-day EMA</text><text x="66" y="169.5" text-anchor="end" class="lv-now" fill="#f8fafc">563.85</text><rect x="268.4" y="158.5" width="65.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="169.5" text-anchor="end" class="lv-now" fill="#f8fafc">PRICE NOW</text><text x="66" y="185.5" text-anchor="end" class="lv-num" fill="#34d399">559.81</text><rect x="236.4" y="174.5" width="97.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="185.5" text-anchor="end" class="lv-lab" fill="#34d399">Yesterday&#x27;s high</text><text x="66" y="201.5" text-anchor="end" class="lv-num" fill="#94a3b8">557.98</text><rect x="230.8" y="190.5" width="103.2" height="14" rx="3" fill="#0c1322"/><text x="330" y="201.5" text-anchor="end" class="lv-lab" fill="#94a3b8">Yesterday&#x27;s close</text><text x="66" y="217.5" text-anchor="end" class="lv-num" fill="#2dd4bf">549.33</text><rect x="275.6" y="206.5" width="58.4" height="14" rx="3" fill="#0c1322"/><text x="330" y="217.5" text-anchor="end" class="lv-lab" fill="#2dd4bf">8-day EMA</text><text x="66" y="233.5" text-anchor="end" class="lv-num" fill="#f87171">546.67</text><rect x="242.0" y="222.5" width="92.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="233.5" text-anchor="end" class="lv-lab" fill="#f87171">Yesterday&#x27;s low</text></svg>
+    </div>
+  
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><b class="mono" style="font-size:16px">NVDA</b><span class="mono">219.52</span></div>
+      <div class="zone z-up">ABOVE yesterday&#39;s high</div><div class="sub">Buyers in control: only look for longs (buys).</div>
+      <svg class="ladder" viewBox="0 0 340 240" width="100%" style="max-width:520px" preserveAspectRatio="xMidYMid meet"><line x1="76" x2="334" y1="25.6" y2="25.6" stroke="#d4af37" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,-5.9 L76,25.6" stroke="#d4af37" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="181.5" y2="181.5" stroke="#818cf8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,150.0 L76,181.5" stroke="#818cf8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="190.8" y2="190.8" stroke="#f8fafc" stroke-width="2"/><circle cx="82" cy="190.8" r="4" fill="#f8fafc"/><path d="M70,166.0 L76,190.8" stroke="#f8fafc" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="193.1" y2="193.1" stroke="#34d399" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,182.0 L76,193.1" stroke="#34d399" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="201.7" y2="201.7" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,198.0 L76,201.7" stroke="#94a3b8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="207.0" y2="207.0" stroke="#2dd4bf" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,214.0 L76,207.0" stroke="#2dd4bf" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="218.4" y2="218.4" stroke="#f87171" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,230.0 L76,218.4" stroke="#f87171" stroke-width=".8" opacity=".6"/><text x="66" y="-2.4" text-anchor="end" class="lv-num" fill="#d4af37">243.37</text><rect x="225.2" y="-13.4" width="108.8" height="14" rx="3" fill="#0c1322"/><text x="330" y="-2.4" text-anchor="end" class="lv-lab" fill="#d4af37">Record / 3-mo high</text><text x="66" y="153.5" text-anchor="end" class="lv-num" fill="#818cf8">220.87</text><rect x="270.0" y="142.5" width="64.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="153.5" text-anchor="end" class="lv-lab" fill="#818cf8">21-day EMA</text><text x="66" y="169.5" text-anchor="end" class="lv-now" fill="#f8fafc">219.52</text><rect x="268.4" y="158.5" width="65.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="169.5" text-anchor="end" class="lv-now" fill="#f8fafc">PRICE NOW</text><text x="66" y="185.5" text-anchor="end" class="lv-num" fill="#34d399">219.19</text><rect x="236.4" y="174.5" width="97.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="185.5" text-anchor="end" class="lv-lab" fill="#34d399">Yesterday&#x27;s high</text><text x="66" y="201.5" text-anchor="end" class="lv-num" fill="#94a3b8">217.94</text><rect x="230.8" y="190.5" width="103.2" height="14" rx="3" fill="#0c1322"/><text x="330" y="201.5" text-anchor="end" class="lv-lab" fill="#94a3b8">Yesterday&#x27;s close</text><text x="66" y="217.5" text-anchor="end" class="lv-num" fill="#2dd4bf">217.18</text><rect x="275.6" y="206.5" width="58.4" height="14" rx="3" fill="#0c1322"/><text x="330" y="217.5" text-anchor="end" class="lv-lab" fill="#2dd4bf">8-day EMA</text><text x="66" y="233.5" text-anchor="end" class="lv-num" fill="#f87171">215.53</text><rect x="242.0" y="222.5" width="92.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="233.5" text-anchor="end" class="lv-lab" fill="#f87171">Yesterday&#x27;s low</text></svg>
+    </div>
+  
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><b class="mono" style="font-size:16px">IWM</b><span class="mono">280.20</span></div>
+      <div class="zone z-flat">INSIDE yesterday&#39;s range</div><div class="sub">No man&#39;s land: wait for a break of the high or low.</div>
+      <svg class="ladder" viewBox="0 0 340 240" width="100%" style="max-width:520px" preserveAspectRatio="xMidYMid meet"><line x1="76" x2="334" y1="25.6" y2="25.6" stroke="#d4af37" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,-18.4 L76,25.6" stroke="#d4af37" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="194.0" y2="194.0" stroke="#34d399" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,150.0 L76,194.0" stroke="#34d399" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="195.3" y2="195.3" stroke="#f8fafc" stroke-width="2"/><circle cx="82" cy="195.3" r="4" fill="#f8fafc"/><path d="M70,166.0 L76,195.3" stroke="#f8fafc" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="195.5" y2="195.5" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,182.0 L76,195.5" stroke="#94a3b8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="209.8" y2="209.8" stroke="#818cf8" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,198.0 L76,209.8" stroke="#818cf8" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="217.8" y2="217.8" stroke="#f87171" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,214.0 L76,217.8" stroke="#f87171" stroke-width=".8" opacity=".6"/><line x1="76" x2="334" y1="218.4" y2="218.4" stroke="#2dd4bf" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/><path d="M70,230.0 L76,218.4" stroke="#2dd4bf" stroke-width=".8" opacity=".6"/><text x="66" y="-14.9" text-anchor="end" class="lv-num" fill="#d4af37">305.18</text><rect x="225.2" y="-25.9" width="108.8" height="14" rx="3" fill="#0c1322"/><text x="330" y="-14.9" text-anchor="end" class="lv-lab" fill="#d4af37">Record / 3-mo high</text><text x="66" y="153.5" text-anchor="end" class="lv-num" fill="#34d399">280.40</text><rect x="236.4" y="142.5" width="97.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="153.5" text-anchor="end" class="lv-lab" fill="#34d399">Yesterday&#x27;s high</text><text x="66" y="169.5" text-anchor="end" class="lv-now" fill="#f8fafc">280.20</text><rect x="268.4" y="158.5" width="65.6" height="14" rx="3" fill="#0c1322"/><text x="330" y="169.5" text-anchor="end" class="lv-now" fill="#f8fafc">PRICE NOW</text><text x="66" y="185.5" text-anchor="end" class="lv-num" fill="#94a3b8">280.18</text><rect x="230.8" y="174.5" width="103.2" height="14" rx="3" fill="#0c1322"/><text x="330" y="185.5" text-anchor="end" class="lv-lab" fill="#94a3b8">Yesterday&#x27;s close</text><text x="66" y="201.5" text-anchor="end" class="lv-num" fill="#818cf8">278.07</text><rect x="270.0" y="190.5" width="64.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="201.5" text-anchor="end" class="lv-lab" fill="#818cf8">21-day EMA</text><text x="66" y="217.5" text-anchor="end" class="lv-num" fill="#f87171">276.89</text><rect x="242.0" y="206.5" width="92.0" height="14" rx="3" fill="#0c1322"/><text x="330" y="217.5" text-anchor="end" class="lv-lab" fill="#f87171">Yesterday&#x27;s low</text><text x="66" y="233.5" text-anchor="end" class="lv-num" fill="#2dd4bf">276.80</text><rect x="275.6" y="222.5" width="58.4" height="14" rx="3" fill="#0c1322"/><text x="330" y="233.5" text-anchor="end" class="lv-lab" fill="#2dd4bf">8-day EMA</text></svg>
+    </div>
+  
+  </div>
+  <div class="card" style="margin-top:10px;font-size:13.5px"><b>Mancini's ES map (8:01 AM):</b> this week's range is 7,677–7,803. 7,750–55 was hit; he says <b>7,748 = support</b>, and 7,783, 7,791, 7,803 are next. Rough SPY equivalents (ES/SPY ratio ~10.08, approximate): 7,748 ≈ <b>$768.65</b>, 7,783 ≈ <b>$772.10</b>, 7,791 ≈ <b>$772.90</b>, 7,803 ≈ <b>$774.10</b>. Tuesday's SPY range was $765.21–771.14, close $769.66. Redraw after the open.</div>
+</section>
+
+
+<section>
+  <div class="sh"><span class="num">05</span><h3>What the traders we follow are saying</h3></div>
+  <div class="wtm"><b>What this means:</b> I read the accounts so you don't have to, and keep only what matters today. Each card shows what they said, the price now, and my honest take. Accounts I rated "Avoid" are never shown.</div>
+  <div class="ideas">
+  
+    <div class="idea">
+      <div class="who"><div class="av">A</div><div><b>Adam Mancini</b><small>@AdamMancini4 · Oct 28, 8:01–8:02 AM ET</small></div><span class="verd">Core levels source</span></div>
+      <div class="tks"><span class="chip">ES=F <span class="up">7,775.75 +0.23%</span></span><span class="chip">SPY <span class="up">769.66 +0.56%</span></span><span class="stance s-agree">AGREE · MOSTLY SIT OUT</span></div>
+      <div style="font-weight:600;font-size:14px">The 7,677 reclaim long keeps paying; 7,750–55 hit. Support 7,748; targets 7,783, 7,791, 7,803. With FOMC at 2 PM there&#39;s &#39;nothing to do&#39; except ride the runner; he only engages if a sharp drop traps bears for the next leg higher.</div>
+      <div class="q">"Note: Obviously we have FOMC at 2pm. At this point there is nothing to do. Ride your runner and we only engage when and if we get an elevator down sell to trigger the traps discussed in newsletter, trap bears again for the next leg higher" <a href="https://x.com/AdamMancini4/status/2115413903039660272" target="_blank" rel="noopener">post ↗</a></div>
+      <div class="take"><b>Warren's take:</b> The best trader on our levels list is saying 'nothing to do' on a Fed day. Our one setup is a small dip-buy at his 7,748 support, closed by 1:30. If it doesn't come cleanly, we do nothing too.</div>
+    </div>
+  
+    <div class="idea">
+      <div class="who"><div class="av">Z</div><div><b>Za</b><small>@ZaStocks · Oct 28, 8:29 AM ET</small></div><span class="verd">Tier 1 · best risk philosophy</span></div>
+      <div class="tks"><span class="chip">SPY <span class="up">769.66 +0.56%</span></span><span class="stance s-agree">CONTEXT · LONG-TERM, NOT TODAY</span></div>
+      <div style="font-weight:600;font-size:14px">Since 1942 the S&amp;P 500 has never had a negative November-through-June stretch after a midterm election: 21 winning periods in a row, averaging +16.6%.</div>
+      <div class="q">"One of the most bullish seasonal windows in history is coming.
+
+Since 1942 the S&amp;P 500 has never posted a negative return from November through June after a midterm election." <a href="https://x.com/ZaStocks/status/2115420638110265478" target="_blank" rel="noopener">post ↗</a></div>
+      <div class="take"><b>Warren's take:</b> A useful tailwind for the long-term the account, not a reason to buy anything today. Seasonal stats say nothing about this afternoon's Fed or tonight's earnings. His own reply: 'history says it should be good but time will tell.'</div>
+    </div>
+  
+    <div class="idea">
+      <div class="who"><div class="av">D</div><div><b>Daan</b><small>@DaanCrypto · Oct 28, 4:40 &amp; 8:21 AM ET</small></div><span class="verd">Core crypto context</span></div>
+      <div class="tks"><span class="chip">BTC-USD <span class="up">80,709.00 +0.59%</span></span><span class="chip">ETH-USD <span class="up">2,338.99 +0.33%</span></span><span class="stance s-agree">AGREE · CRYPTO STILL WAIT</span></div>
+      <div style="font-weight:600;font-size:14px">BTC is moving higher as shorts close or get squeezed; his base case is a grind higher if nothing breaks. ETH is trying to retake $2,350 after a few days below it, with the daily 200 EMA holding as support.</div>
+      <div class="q">"$ETH Attempting to retake the $2350 support after deviating below it for some days. Meanwhile, the Daily 200EMA has held as support." <a href="https://x.com/DaanCrypto/status/2115418583966650401" target="_blank" rel="noopener">post ↗</a></div>
+      <div class="take"><b>Warren's take:</b> Good signs, but 'attempting' isn't 'done'. ETH is at ~$2,338, still just under $2,350. We want a daily close back above it (and the Fed out of the way) before the account buys anything.</div>
+    </div>
+  
+  </div>
+  <div class="sub" style="margin-top:8px;font-size:12.5px"><b>Left out on purpose:</b> @mozlyxy, @StocksGambino and @sunxliao (Avoid). Justin Banks' 'trade plans posted for FOMC' (paid-group promo, no public setup). Sean's posts were a masterclass promo. Jake's posts were replies, not setups. Micron, Arm and other chip gaps (move already happened). Anything before 10:00 AM or after 1:30 PM.</div>
+</section>
+
+
+<section>
+  <div class="sh"><span class="num">06</span><h3>Today's game plan</h3></div>
+  <div class="wtm"><b>What this means:</b> These are the only trades we take today, and only if the trigger happens. No trigger = no trade, and that's a win too. Size each trade yourself so a stopped-out trade costs 1–3% of your account (stop distance × shares or contracts = $ at risk). Every trade comes with its exit plan, <b>decided now, before entry, not during the trade</b>.</div>
+  
+  <div class="plans">
+  
+    <div class="plan">
+      <div class="ph">
+        <span class="tkr">SPY</span><span class="dir d-long">LONG</span><span class="grade">C setup · day trade · reduced 2% risk</span>
+        <span class="sub" style="font-size:13px">Mancini&#39;s support ES 7,748 (≈ SPY $768.65): a pullback that holds keeps this week&#39;s uptrend going</span>
+        <div class="sp"><div class="lbl">Last</div><div class="px">769.66 <span class="up" style="font-size:12px">+0.56%</span></div></div>
+        <svg class="spark" viewBox="0 0 120 34" width="120" height="34" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g25427673" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d399" stop-opacity=".28"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs><path d="M1,33 L1.0,23.2 L6.6,25.4 L12.2,27.8 L17.9,25.7 L23.5,16.8 L29.1,8.7 L34.7,2.0 L40.3,4.9 L46.0,10.1 L51.6,2.8 L57.2,3.6 L62.8,3.7 L68.4,16.9 L74.0,13.5 L79.7,26.9 L85.3,21.8 L90.9,17.8 L96.5,11.4 L102.1,25.7 L107.8,32.0 L113.4,23.5 L119.0,16.8 L119,33 Z" fill="url(#g25427673)"/><polyline points="1.0,23.2 6.6,25.4 12.2,27.8 17.9,25.7 23.5,16.8 29.1,8.7 34.7,2.0 40.3,4.9 46.0,10.1 51.6,2.8 57.2,3.6 62.8,3.7 68.4,16.9 74.0,13.5 79.7,26.9 85.3,21.8 90.9,17.8 96.5,11.4 102.1,25.7 107.8,32.0 113.4,23.5 119.0,16.8" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      </div>
+      <div class="pbody">
+        <div class="pcol">
+          <dl class="kv">
+            <dt>Instrument</dt><dd><b>SPY Nov 2 $772 CALL</b> <span class="sub">(a call on the S&amp;P 500 ETF with a $772 strike, expiring Monday Nov 2: it gains if SPY rises, and you can never lose more than you paid)</span></dd>
+            <dt>Trigger</dt><dd>Only between <b>10:00 AM and 12:00 PM</b>. SPY must <b>pull back to about $768.65</b> (Mancini's 7,748), then a 5-minute candle must <b>close back above $769.10</b>. Enter on the next candle if it doesn't make a new low. <b>Skip</b> if SPY runs away without a pullback, or closes a 5-minute candle under $768.20 first.</dd>
+            <dt>Stop (exit)</dt><dd>Sell if SPY closes a 5-minute candle <b>below $768.20</b> (the 7,748 support clearly lost), or if the call loses half its value, whichever comes first.</dd>
+            <dt>Targets</dt><dd>Target 1 <b>$771.14</b> (Tuesday's high). Target 2 <b>$772.10</b> (ES 7,783). With 1–2 contracts, <b>sell it all at target 1</b>; with more, sell ⅓ and move the stop to breakeven. <b>Everything sold by 1:30 PM.</b> Nothing held into the 2:00 Fed decision.</dd>
+            <dt>Cancel if</dt><dd>SPY closes a 5-minute candle under $768.20 before any trigger, or a big Fed/oil headline hits before 1:30 (step aside, don't guess).</dd>
+          </dl>
+          <div class="ladder2">
+            <div class="lrow l-tgt"><span>TARGET 2</span><span>772.10</span></div><div class="lrow l-tgt"><span>TARGET 1</span><span>771.14</span></div>
+            <div class="lrow l-ent"><span>ENTRY (underlying)</span><span>769.10</span></div>
+            <div class="lrow l-stp"><span>STOP (underlying)</span><span>768.20</span></div>
+          </div>
+        </div>
+        <div class="pcol">
+          <div class="why"><b>Why this trade:</b> (1) Mancini's support map has worked all week and 7,748 is his first support under price. (2) The stop is close and clear (~$0.90). (3) Target 1 is about twice as far as the stop. <b>Honest grade C:</b> the move is mature, Mancini himself says there's nothing to do, and the trading window is short because of the Fed. That's why it's 2% risk, closed by 1:30, and skipping it is completely fine.</div>
+          <div class="sizebox"><div class="lbl" style="color:var(--gold)">Position size</div>
+            <div class="sub">Risk 1–3% of your account. Size = (your $ risk) ÷ (distance from entry to stop, or the option's −50% stop × 100 per contract).</div>
+            <div class="row"><span>Option price</span><span>$5.04 × 100 = $504/contract</span></div>
+            <div class="row"><span>Sell if option drops to</span><span class="dn">$2.52 (−50%)</span></div>
+          </div>
+          <div class="warnbox">We use the <b>Nov 2 $772</b> call: grade B, passes the gate (spread ~3.4%, delta ~0.50, ETF so no earnings) and one contract fits today's your risk budget. Caution: thin volume so far. Pre-open prices are Tuesday's closing quotes; re-check the live spread at entry and use a limit order. If the check fails at entry, <b>pass</b>. Sold by 1:30 PM no matter what.</div>
+        </div>
+      </div>
+      
+      <div class="exitp">
+        <div class="eh"><span class="lock">🔒 EXIT PLAN · DECIDED BEFORE ENTRY</span><b>Place these orders the moment you're filled. Then hands off.</b></div>
+        <div class="sum"><span class="dn">STOP: $2.52 on the option (−50%) or $768.20 on SPY, whichever comes first</span><span class="up">TARGET 1: sell ⅓ at 771.14</span><span>THEN: stop → breakeven, trail the rest on the 8 EMA</span><span style="color:var(--warn)">DAY TRADE</span></div>
+        <ol><li><b>BUY your SPY Nov 2 $772 CALL</b> with a limit order, max <b>$5.19</b> (est. price when the trigger hits: $5.04). Never use a market order on options.</li><li>Attach an <b>OCO order</b> right away: <b>STOP</b> sell your contracts at <b>$2.52</b> (−50%, GTC) + <b>LIMIT</b> sell ⅓ at <b>$4.93</b> (≈ what it's worth if SPY reaches $771.14 today). Re-set both off your actual fill price.</li><li>Backup stop on the stock: set a <b>price alert on SPY at $768.20</b>. If it rings, sell at the bid at once, even if the option stop hasn't triggered. (Most brokers can't trigger an option stop off the stock price.)</li><li>When target 1 fills: move the stop on the remaining contracts to your entry price (breakeven). Trail it under the 5-minute <b>8 EMA</b> of SPY, and sell if a candle closes below it.</li><li><b>Time stop:</b> If the trigger hasn't happened by 12:00 PM, no trade today. If in the trade and target 1 isn't hit by 1:00 PM, sell. Everything closed by 1:30 PM, before the Fed. Options rule: out by Thu Oct 29 at the latest. Never hold into the final 2 days.</li></ol>
+      </div>
+      
+    </div>
+  
+  </div>
+  <div class="card" style="margin-top:12px;font-size:13.5px">One small idea at 2% risk, so the most you can lose today is one planned loss, far under the daily loss limit. Yesterday the same kind of patient dip-buy paid target 1. Today the window is shorter (10:00–12:00 entry, out by 1:30), and if SPY never pulls back to $768.65 and holds, there's no trade.</div>
+</section>
+
+
+
+
+<section>
+  <div class="sh"><span class="num">07</span><h3>Options ideas</h3></div>
+  <div class="wtm"><b>What this means:</b> For each idea, here is a menu of real option contracts, from "expires today" to "two months out". I mark the one I'd pick for a beginner. Prices come from the live option chain: <span class="src-live">live mid</span> = halfway between today's bid and ask; <span class="src-last">last trade</span> = the last price someone paid (it may be stale, so check your broker).</div>
+  <div class="oxp">
+    <div class="card">
+      <h5>ITM · ATM · OTM: where the strike sits</h5>
+      <div class="mny">
+        <span class="mtag m-ITM">ITM</span><div><b>In the money.</b> A call's strike is <i>below</i> the stock price (for a put, above). It costs more but already has real value, moves most like the stock (~60–80¢ per $1), and has the best odds.</div>
+        <span class="mtag m-ATM">ATM</span><div><b>At the money.</b> The strike is about equal to the stock price. A balanced middle: ~50¢ per $1, ~50/50 odds. The most traded and the easiest to get in and out of.</div>
+        <span class="mtag m-OTM">OTM</span><div><b>Out of the money.</b> A call's strike is <i>above</i> the stock price. It's cheap, but the stock has to move a lot, fast. It's often worth $0 at expiry: a lottery ticket.</div>
+      </div>
+      <div class="sub" style="margin-top:8px;font-size:12px"><b>Delta</b> ≈ how many cents the option moves when the stock moves $1. It's also a rough chance the option finishes in the money. One contract = 100 shares, so a delta of 0.50 ≈ $50 per $1 move.</div>
+    </div>
+    <div class="card">
+      <h5>Daily vs weekly vs monthly: the time tradeoff</h5>
+      <table class="tiers"><tr><th></th><th>COST</th><th>TIME DECAY</th><th>ODDS / FORGIVENESS</th></tr>
+        <tr><td>Daily (0DTE)</td><td>Cheapest</td><td class="dn">Brutal: can lose most of its value in hours</td><td>You must be right <i>now</i>. Pros only.</td></tr>
+        <tr><td>Weekly</td><td>Low</td><td class="dn">Fast, speeds up near expiry</td><td>Good for 1–3 day moves; little room for a slow start.</td></tr>
+        <tr><td>Monthly</td><td>Medium</td><td style="color:var(--warn)">Moderate</td><td>The idea has weeks to work. Best for beginners.</td></tr>
+        <tr><td>45–60 day</td><td>Highest</td><td class="up">Slowest per day</td><td>The most forgiving, but ties up the most cash.</td></tr>
+      </table>
+      <div class="sub" style="margin-top:8px;font-size:12px"><b>Time decay</b> = what the option loses each day if the stock doesn't move (shown as "Decay/day"). <b>Break-even</b> = where the stock must be at expiry for you to not lose money.</div>
+    </div>
+  </div>
+
+  
+  <div class="oidea">
+    <div class="oh">
+      <span class="tkr">SPY</span>
+      <span class="dir d-long">CALLS · BULLISH</span>
+      <span class="grade">Game plan #1</span>
+      <span style="font-weight:600;font-size:14px">SPY hold of $768.65 (game plan #1)</span>
+      <div class="sp" style="margin-left:auto;text-align:right"><div class="lbl">Premarket</div><div class="mono" style="font-weight:700">771.26 <span class="up" style="font-size:12px">+0.56%</span></div></div>
+    </div>
+    <div class="ob">
+      <div class="why" style="font-size:13.5px">A pullback to Mancini's 7,748 (≈ $768.65) that holds and closes back above $769.10; aiming for $771.14 / $772.10 with a stop under $768.20.</div>
+      <div class="sub" style="margin:4px 0 8px"><b style="color:var(--blue)">When:</b> Only 10:00–12:00, only on the written trigger. Day trade only: out by 1:30 PM, never held into the 2:00 Fed.</div>
+      
+      
+      
+      <div class="pick"><span class="star">WARREN'S PICK</span><div>
+        <div class="ct">SPY Mon Nov 2 $772 CALL <span class="mtag m-ATM">ATM</span></div>
+        <div class="rs">Nov 2 $772 call: grade B and passes the gate (spread ~3.4% on closing quotes, delta ~0.50 at the edge of our 0.30–0.50 window, ETF so no earnings, 5 days to expiry) and one contract fits the your risk budget at the 50% stop. One caution: thin volume so far, so use a limit order. The Nov 20 $775 grades A but one contract is over today's budget. Skip today's 0DTE (fails the time check) and the Oct 30 $772 (only 2 days left).</div></div></div>
+      <div class="exitp" style="border:1px solid var(--line);border-radius:12px;margin:-4px 0 12px">
+        <div class="eh"><span class="lock">🔒 EXIT PLAN</span><b>Same contract as the game plan, so use the exit orders on that card:</b></div>
+        <div class="sum"><span class="dn">STOP: $2.52 on the option (−50%) or $768.20 on SPY, whichever comes first</span><span class="up">TARGET 1: sell ⅓ at 771.14</span><span style="color:var(--warn)">If the trigger hasn&#39;t happened by 12:00 PM, no trade today. If in the trade and target 1 isn&#39;t hit by 1:00 PM, sell. Everything closed by 1:30 PM, before the Fed. Options rule: out by Thu Oct 29 at the latest. Never hold into the final 2 days.</span></div>
+        
+      </div>
+      
+      <div style="overflow-x:auto">
+      <table class="om">
+        <thead><tr><th>EXPIRY TYPE</th><th>STRIKE</th><th>EXPIRES</th><th>PRICE</th><th>COST / CONTRACT</th><th>LOSS AT −50% STOP</th><th>BREAK-EVEN</th><th>DELTA (PLAIN ENGLISH)</th><th>DECAY / DAY</th><th>QUALITY CHECK</th></tr></thead>
+        <tbody>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">Daily</span> <span class="mtag m-ATM">ATM</span><span class="planchip">PLAN</span></td>
+          <td data-l="Strike"><b>$771</b></td>
+          <td data-l="Expires">Wed Oct 28<span class="sm">0 days left (0DTE)</span></td>
+          <td data-l="Price"><b>$2.80</b><span class="sm src-live">closing mid · bid 2.77 / ask 2.84 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$280<span class="sm">2.80 × 100 shares</span></td>
+          <td data-l="Loss at stop">$140<span class="sm">per contract at a −50% stop · $280 if it goes to $0</span></td>
+          <td data-l="Break-even">773.80<span class="sm">stock up 0.3% by expiry</span></td>
+          <td data-l="Delta"><b>0.52</b><span class="sm">≈ $0.52 per $1 move ($52/contract) · ~52% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$446</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-F">F</span><br><span class="qb q-pass" title="2.5% of mid ($0.07 wide), from closing quotes, so re-check at entry">Spread ✓</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 359 · OI 8,278">Volume/OI !</span><span class="qb q-caution" title="0.52 (want 0.30–0.50)">Delta !</span><span class="qb q-fail" title="strike 0.0% from price · 0 days (want ≥5)">Strike &amp; time ✗</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Volume/OI: vol 359 · OI 8,278 · Delta: 0.52 (want 0.30–0.50) · Strike &amp; time: strike 0.0% from price · 0 days (want ≥5)</span></td>
+        </tr>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">Weekly</span> <span class="mtag m-ATM">ATM</span></td>
+          <td data-l="Strike"><b>$771</b></td>
+          <td data-l="Expires">Fri Nov 6<span class="sm">9 days left</span></td>
+          <td data-l="Price"><b>$8.05</b><span class="sm src-live">closing mid · bid 7.95 / ask 8.16 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$806<span class="sm">8.05 × 100 shares</span></td>
+          <td data-l="Loss at stop">$403<span class="sm">per contract at a −50% stop · $806 if it goes to $0</span></td>
+          <td data-l="Break-even">779.05<span class="sm">stock up 1.0% by expiry</span></td>
+          <td data-l="Delta"><b>0.53</b><span class="sm">≈ $0.53 per $1 move ($53/contract) · ~52% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$45</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-C">C</span><br><span class="qb q-pass" title="2.6% of mid ($0.21 wide), from closing quotes, so re-check at entry">Spread ✓</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 562 · OI 898">Volume/OI !</span><span class="qb q-caution" title="0.53 (want 0.30–0.50)">Delta !</span><span class="qb q-pass" title="strike 0.0% from price · 9 days (want ≥5)">Strike &amp; time ✓</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Volume/OI: vol 562 · OI 898 · Delta: 0.53 (want 0.30–0.50)</span></td>
+        </tr>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">Weekly</span> <span class="mtag m-OTM">OTM</span></td>
+          <td data-l="Strike"><b>$781</b></td>
+          <td data-l="Expires">Fri Nov 6<span class="sm">9 days left</span></td>
+          <td data-l="Price"><b>$3.16</b><span class="sm src-live">closing mid · bid 3.08 / ask 3.24 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$316<span class="sm">3.16 × 100 shares</span></td>
+          <td data-l="Loss at stop">$158<span class="sm">per contract at a −50% stop · $316 if it goes to $0</span></td>
+          <td data-l="Break-even">784.16<span class="sm">stock up 1.7% by expiry</span></td>
+          <td data-l="Delta"><b>0.30</b><span class="sm">≈ $0.30 per $1 move ($30/contract) · ~29% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$34</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-C">C</span><br><span class="qb q-caution" title="5.1% of mid ($0.16 wide), from closing quotes, so re-check at entry">Spread !</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 145 · OI 1,321">Volume/OI !</span><span class="qb q-pass" title="0.30 (want 0.30–0.50)">Delta ✓</span><span class="qb q-pass" title="strike 1.3% from price · 9 days (want ≥5)">Strike &amp; time ✓</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Spread: 5.1% of mid ($0.16 wide), from closing quotes, so re-check at entry · Volume/OI: vol 145 · OI 1,321</span></td>
+        </tr>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">Monthly</span> <span class="mtag m-ITM">ITM</span></td>
+          <td data-l="Strike"><b>$757</b></td>
+          <td data-l="Expires">Fri Nov 20<span class="sm">23 days left</span></td>
+          <td data-l="Price"><b>$22.63</b><span class="sm src-live">closing mid · bid 21.29 / ask 23.97 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$2,263<span class="sm">22.63 × 100 shares</span></td>
+          <td data-l="Loss at stop">$1132<span class="sm">per contract at a −50% stop · $2263 if it goes to $0</span></td>
+          <td data-l="Break-even">779.63<span class="sm">stock up 1.1% by expiry</span></td>
+          <td data-l="Delta"><b>0.70</b><span class="sm">≈ $0.70 per $1 move ($70/contract) · ~68% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$30</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-F">F</span><br><span class="qb q-fail" title="11.8% of mid ($2.68 wide), from closing quotes, so re-check at entry">Spread ✗</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 16 · OI 493">Volume/OI !</span><span class="qb q-caution" title="0.70 (want 0.30–0.50)">Delta !</span><span class="qb q-pass" title="strike 1.8% from price · 23 days (want ≥5)">Strike &amp; time ✓</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Spread: 11.8% of mid ($2.68 wide), from closing quotes, so re-check at entry · Volume/OI: vol 16 · OI 493 · Delta: 0.70 (want 0.30–0.50)</span></td>
+        </tr>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">Monthly</span> <span class="mtag m-ATM">ATM</span></td>
+          <td data-l="Strike"><b>$771</b></td>
+          <td data-l="Expires">Fri Nov 20<span class="sm">23 days left</span></td>
+          <td data-l="Price"><b>$12.56</b><span class="sm src-live">closing mid · bid 12.25 / ask 12.87 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$1,256<span class="sm">12.56 × 100 shares</span></td>
+          <td data-l="Loss at stop">$628<span class="sm">per contract at a −50% stop · $1256 if it goes to $0</span></td>
+          <td data-l="Break-even">783.56<span class="sm">stock up 1.6% by expiry</span></td>
+          <td data-l="Delta"><b>0.54</b><span class="sm">≈ $0.54 per $1 move ($54/contract) · ~52% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$29</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-C">C</span><br><span class="qb q-pass" title="4.9% of mid ($0.62 wide), from closing quotes, so re-check at entry">Spread ✓</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 493 · OI 1,236">Volume/OI !</span><span class="qb q-caution" title="0.54 (want 0.30–0.50)">Delta !</span><span class="qb q-pass" title="strike 0.0% from price · 23 days (want ≥5)">Strike &amp; time ✓</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Volume/OI: vol 493 · OI 1,236 · Delta: 0.54 (want 0.30–0.50)</span></td>
+        </tr>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">45–60 day</span> <span class="mtag m-ATM">ATM</span></td>
+          <td data-l="Strike"><b>$771</b></td>
+          <td data-l="Expires">Fri Dec 18<span class="sm">51 days left</span></td>
+          <td data-l="Price"><b>$19.29</b><span class="sm src-live">closing mid · bid 19.16 / ask 19.41 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$1,928<span class="sm">19.29 × 100 shares</span></td>
+          <td data-l="Loss at stop">$964<span class="sm">per contract at a −50% stop · $1928 if it goes to $0</span></td>
+          <td data-l="Break-even">790.28<span class="sm">stock up 2.5% by expiry</span></td>
+          <td data-l="Delta"><b>0.55</b><span class="sm">≈ $0.55 per $1 move ($55/contract) · ~53% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$21</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-C">C</span><br><span class="qb q-pass" title="1.3% of mid ($0.25 wide), from closing quotes, so re-check at entry">Spread ✓</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 20 · OI 1,701">Volume/OI !</span><span class="qb q-caution" title="0.55 (want 0.30–0.50)">Delta !</span><span class="qb q-pass" title="strike 0.0% from price · 51 days (want ≥5)">Strike &amp; time ✓</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Volume/OI: vol 20 · OI 1,701 · Delta: 0.55 (want 0.30–0.50)</span></td>
+        </tr>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">Game-plan pick</span> <span class="mtag m-ATM">ATM</span></td>
+          <td data-l="Strike"><b>$772</b></td>
+          <td data-l="Expires">Fri Oct 30<span class="sm">2 days left</span></td>
+          <td data-l="Price"><b>$4.20</b><span class="sm src-live">closing mid · bid 4.15 / ask 4.25 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$420<span class="sm">4.20 × 100 shares</span></td>
+          <td data-l="Loss at stop">$210<span class="sm">per contract at a −50% stop · $420 if it goes to $0</span></td>
+          <td data-l="Break-even">776.20<span class="sm">stock up 0.6% by expiry</span></td>
+          <td data-l="Delta"><b>0.48</b><span class="sm">≈ $0.48 per $1 move ($48/contract) · ~48% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$101</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-C">C</span><br><span class="qb q-pass" title="2.4% of mid ($0.10 wide), from closing quotes, so re-check at entry">Spread ✓</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 20 · OI 5,250">Volume/OI !</span><span class="qb q-pass" title="0.48 (want 0.30–0.50)">Delta ✓</span><span class="qb q-caution" title="strike 0.1% from price · 2 days (want ≥5)">Strike &amp; time !</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Volume/OI: vol 20 · OI 5,250 · Strike &amp; time: strike 0.1% from price · 2 days (want ≥5)</span></td>
+        </tr>
+        
+        <tr class="rec">
+          <td class="hd" data-l="Type"><span class="tierchip">Game-plan pick</span> <span class="mtag m-ATM">ATM</span> <span class="gold" style="font-size:10.5px">★ PICK</span></td>
+          <td data-l="Strike"><b>$772</b></td>
+          <td data-l="Expires">Mon Nov 2<span class="sm">5 days left</span></td>
+          <td data-l="Price"><b>$4.96</b><span class="sm src-live">closing mid · bid 4.87 / ask 5.04 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$496<span class="sm">4.96 × 100 shares</span></td>
+          <td data-l="Loss at stop">$248<span class="sm">per contract at a −50% stop · $496 if it goes to $0</span></td>
+          <td data-l="Break-even">776.96<span class="sm">stock up 0.7% by expiry</span></td>
+          <td data-l="Delta"><b>0.49</b><span class="sm">≈ $0.49 per $1 move ($49/contract) · ~49% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$52</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-B">B</span><br><span class="qb q-pass" title="3.4% of mid ($0.17 wide), from closing quotes, so re-check at entry">Spread ✓</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 4 · OI 446">Volume/OI !</span><span class="qb q-pass" title="0.49 (want 0.30–0.50)">Delta ✓</span><span class="qb q-pass" title="strike 0.1% from price · 5 days (want ≥5)">Strike &amp; time ✓</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Volume/OI: vol 4 · OI 446</span></td>
+        </tr>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">Game-plan pick</span> <span class="mtag m-ATM">ATM</span></td>
+          <td data-l="Strike"><b>$774</b></td>
+          <td data-l="Expires">Mon Nov 2<span class="sm">5 days left</span></td>
+          <td data-l="Price"><b>$3.86</b><span class="sm src-live">closing mid · bid 3.80 / ask 3.92 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$386<span class="sm">3.86 × 100 shares</span></td>
+          <td data-l="Loss at stop">$193<span class="sm">per contract at a −50% stop · $386 if it goes to $0</span></td>
+          <td data-l="Break-even">777.86<span class="sm">stock up 0.9% by expiry</span></td>
+          <td data-l="Delta"><b>0.43</b><span class="sm">≈ $0.43 per $1 move ($43/contract) · ~42% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$49</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-B">B</span><br><span class="qb q-pass" title="3.1% of mid ($0.12 wide), from closing quotes, so re-check at entry">Spread ✓</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 1 · OI 514">Volume/OI !</span><span class="qb q-pass" title="0.43 (want 0.30–0.50)">Delta ✓</span><span class="qb q-pass" title="strike 0.4% from price · 5 days (want ≥5)">Strike &amp; time ✓</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Volume/OI: vol 1 · OI 514</span></td>
+        </tr>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">Game-plan pick</span> <span class="mtag m-ATM">ATM</span></td>
+          <td data-l="Strike"><b>$772</b></td>
+          <td data-l="Expires">Fri Nov 6<span class="sm">9 days left</span></td>
+          <td data-l="Price"><b>$7.42</b><span class="sm src-live">closing mid · bid 7.28 / ask 7.56 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$742<span class="sm">7.42 × 100 shares</span></td>
+          <td data-l="Loss at stop">$371<span class="sm">per contract at a −50% stop · $742 if it goes to $0</span></td>
+          <td data-l="Break-even">779.42<span class="sm">stock up 1.1% by expiry</span></td>
+          <td data-l="Delta"><b>0.51</b><span class="sm">≈ $0.51 per $1 move ($51/contract) · ~50% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$44</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-C">C</span><br><span class="qb q-pass" title="3.8% of mid ($0.28 wide), from closing quotes, so re-check at entry">Spread ✓</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-caution" title="vol 17 · OI 1,369">Volume/OI !</span><span class="qb q-caution" title="0.51 (want 0.30–0.50)">Delta !</span><span class="qb q-pass" title="strike 0.1% from price · 9 days (want ≥5)">Strike &amp; time ✓</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm">Volume/OI: vol 17 · OI 1,369 · Delta: 0.51 (want 0.30–0.50)</span></td>
+        </tr>
+        
+        <tr class="">
+          <td class="hd" data-l="Type"><span class="tierchip">Game-plan pick</span> <span class="mtag m-OTM">OTM</span></td>
+          <td data-l="Strike"><b>$775</b></td>
+          <td data-l="Expires">Fri Nov 20<span class="sm">23 days left</span></td>
+          <td data-l="Price"><b>$10.18</b><span class="sm src-live">closing mid · bid 10.12 / ask 10.24 (last quotes; market closed)</span></td>
+          <td data-l="Cost / contract">$1,018<span class="sm">10.18 × 100 shares</span></td>
+          <td data-l="Loss at stop">$509<span class="sm">per contract at a −50% stop · $1018 if it goes to $0</span></td>
+          <td data-l="Break-even">785.18<span class="sm">stock up 1.8% by expiry</span></td>
+          <td data-l="Delta"><b>0.48</b><span class="sm">≈ $0.48 per $1 move ($48/contract) · ~47% chance to finish ITM</span></td>
+          <td data-l="Decay / day"><span class="dn">-$28</span><span class="sm">per contract if the stock stays flat</span></td>
+          <td data-l="Quality"><span class="qg qg-A">A</span><br><span class="qb q-pass" title="1.2% of mid ($0.12 wide), from closing quotes, so re-check at entry">Spread ✓</span><span class="qb q-pass" title="~22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0). Cheap options">IV rank ✓</span><span class="qb q-pass" title="vol 3,004 · OI 12,005">Volume/OI ✓</span><span class="qb q-pass" title="0.48 (want 0.30–0.50)">Delta ✓</span><span class="qb q-pass" title="strike 0.5% from price · 23 days (want ≥5)">Strike &amp; time ✓</span><span class="qb q-pass" title="ETF, no earnings">Earnings ✓</span><span class="sm"></span></td>
+        </tr>
+        
+        </tbody>
+      </table>
+      </div>
+      <div class="sub" style="font-size:11.5px">IV rank ≈ 22 (estimate: VIX 17.4 vs its 1-yr range 13.5–31.0)</div>
+      <div class="warnbox">Pre-open quotes are Tuesday's closing prices. Re-check the live spread at entry and use a limit order. If the contract check fails at entry, pass.</div>
+      
+    </div>
+  </div>
+  
+  <div class="card" style="margin:10px 0"><div class="eh"><b>✅ Contract quality check (Enrich Trades checklist): run it before every options buy</b></div>
+    <ol class="qlist">
+      <li><b>Spread</b> under 10% of the mid price, ideally under 5%. Always use a <b>limit order</b>; never a market order.</li>
+      <li><b>IV rank</b> under 30 is best (options are cheap). Over 70 = caution: you're overpaying and IV can collapse. <i>Ours is an estimate:</i> ETFs use the volatility index's 1-year range (VIX/VXN); stocks compare today's ATM IV with a year of realized volatility.</li>
+      <li><b>Volume & open interest</b> ideally 1,000+, and plenty more than our order size, so you can get out.</li>
+      <li><b>Delta 0.30–0.50</b>: enough leverage without paying for a lottery ticket.</li>
+      <li><b>Strike near the money, with enough time</b> for the idea to work.</li>
+      <li><b>Earnings before expiration?</b> Then the price is pumped up and gets crushed after the report. Fail.</li>
+    </ol>
+    <div class="sub">Badges: <span class="qb q-pass">✓ pass</span><span class="qb q-caution">! caution</span><span class="qb q-fail">✗ fail</span><span class="qb q-check">? check at entry</span>. Grade: A = all pass, B = 1 caution, C = 2+ cautions, F = any fail. <b>Warren's pick must pass spread, delta and earnings.</b> If it doesn't, the chart is good but the contract isn't, so pass or use shares.</div>
+    <div class="warnbox" style="margin-top:8px">⏰ This board runs before the open, so bid/ask spreads come from the <b>last quotes of the prior session</b>. Re-check the live spread at entry; if it's wider than 10% of the mid, don't take it.</div>
+  </div>
+  <div class="sub" style="font-size:11.5px">Delta, chance-ITM and decay are Black-Scholes estimates. Implied volatility is backed out from the price shown (risk-free rate from the 13-week T-bill, 4.04%), so treat them as rough guides. Size so a stopped-out trade costs 1–3% of your account. Always use a <b>limit order</b> near the middle of the bid/ask.</div>
+</section>
+
+
+
+
+<section>
+  <div class="sh"><span class="num">08</span><h3>Lesson of the day</h3></div>
+  <div class="wtm"><b>What this means:</b> One concept a day, tied to today's plan, so the knowledge sticks because you see it used live.</div>
+  <div class="lesson">
+    <div class="lbl" style="color:var(--teal)">Lesson 15</div>
+    <h4>Why we&#39;re flat before the Fed</h4>
+    <p>A Fed decision is a coin flip you can't study. At 2:00 the statement comes out, and at 2:30 the chair talks. SPY can swing 1% either way in minutes, and option prices jump around wildly. Nobody, not even the pros, knows which way.</p><p>Holding a short-dated option through that is gambling, not trading. Your stop can't protect you, because price can jump straight past it. That's why every trade today has a hard 1:30 PM exit.</p><p>Option buyers get hit twice: before the event, options are pricey because everyone expects a move. Right after, that extra price drains out (called 'IV crush'), so even a correct guess can lose money.</p>
+    <div class="example">Hold through the Fed:  you don&#39;t know the direction, the stop can be skipped, and the option loses its event premium.
+Flat by 1:30:  you keep whatever you made, and you can trade tomorrow with fresh information.</div>
+    <p style="margin-top:12px"><b class="gold">Your homework:</b> At 2:00 and 2:30, just watch SPY with no position. Write down how far it moved in the first 15 minutes. That's the risk you avoided.</p>
+  </div>
+</section>
+
+
+
+
+
+
+<section>
+  <details ><summary>Plain-English glossary (tap to open)</summary>
+  <div class="gloss"><div><b>ETF</b> A fund that trades like a stock and holds a basket of companies (SPY = 500 big US companies).</div><div><b>Premarket</b> Trading from 4:00 to 9:30 AM ET. Fewer traders, so prices jump around more.</div><div><b>Futures</b> Contracts on an index that trade nearly 24 hours. They hint at how stocks will open.</div><div><b>Yield</b> The interest rate a bond pays. When yields rise fast, stocks (especially growth stocks) often fall.</div><div><b>bp (basis point)</b> One hundredth of a percent. A yield move from 5.22% to 5.25% is +3 bp.</div><div><b>VIX</b> The &#39;fear gauge&#39;, built from option prices. Low (under 20) = calm. High (over 30) = panic.</div><div><b>EMA (8 / 21)</b> A moving average of recent prices that weights the newest days more. Price above both = short-term uptrend.</div><div><b>Break and retest</b> Price breaks through a level, comes back to test it, and holds. That&#39;s the confirmation we enter on.</div><div><b>Failed breakdown</b> Price briefly breaks a support, traps sellers, then reclaims the level. Often a sharp bounce setup.</div><div><b>Stop</b> The price where you exit to cap the loss. Decided before you enter.</div><div><b>Target</b> The price where you plan to take profit, usually the next level.</div><div><b>Call option</b> The right to buy a stock at a set price (the strike) by a date (expiry). It profits if the stock rises.</div><div><b>Put option</b> The right to sell at the strike. It profits if the stock falls.</div><div><b>Strike</b> The price written into the option contract.</div><div><b>Expiry</b> The date the option dies. The closer it gets, the faster the option loses value (time decay).</div><div><b>Premium</b> The price of an option, quoted per share. One contract = 100 shares, so a $10 premium costs $1,000.</div><div><b>Daily loss limit</b> If we hit our daily loss limit, we stop trading until tomorrow. No exceptions.</div><div><b>Options expiration (opex)</b> The day a big batch of option contracts expires. The third Friday of the month is the largest one. Prices can stick near popular strike prices, then move fast late in the day.</div><div><b>Weekly candle</b> One bar that sums up the whole week: where it opened Monday, the high, the low, and where it closes Friday at 4:00 PM.</div><div><b>Wick</b> The thin line on a candle showing prices that were reached but not held. A long lower wick means sellers pushed price down and buyers pushed it back up.</div><div><b>Capitulation</b> When the last nervous holders give up and sell all at once, often on huge volume. It can mark a short-term low, but only price action afterwards confirms it.</div><div><b>Support / resistance</b> A price where buyers have stepped in before (support) or sellers have (resistance).</div><div><b>Gap</b> When a stock opens well above (gap up) or below (gap down) its previous close because of overnight news.</div><div><b>Bear trap</b> A dip under support that pulls in sellers, then reverses up quickly, forcing them to buy back. Same idea as a failed breakdown.</div><div><b>Either/or plan</b> Two opposite trade plans written in advance; the first one that triggers is taken and the other is cancelled.</div><div><b>Retest</b> Price comes back to a level it just broke through. If the old ceiling now holds as a floor, the breakout is confirmed.</div><div><b>Risk-off</b> A mood where investors sell riskier things (tech, crypto) and buy safer ones (bonds, gold, defensive stocks).</div></div>
+  </details>
+</section>
+
+<footer>
+  <div style="color:var(--warn);margin-bottom:8px">Data feed issues this run (affected numbers show "n/a"): premarket ITB: &#39;close&#39;; premarket BITQ: &#39;close&#39;</div>
+  Sources: Yahoo Finance (delayed quotes, options), CoinGecko (crypto), news and calendar as linked. Trader quotes come from public X posts; Warren's takes are opinion.
+  This is an educational trading plan, not financial advice. Options can lose 100% of what you pay. You place every order yourself, so double-check prices in your broker before you click.
+  <div style="margin-top:6px">Generated Oct 28, 2026 8:47 AM ET · Warren for Dryable</div>
+</footer>
+</div>
+<script>
+(function(){var t=1793194200000;if(!t)return;function f(){var s=Math.max(0,Math.floor((t-Date.now())/1000));var h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;var v=s===0?"OPEN":(h+"h "+String(m).padStart(2,"0")+"m "+String(x).padStart(2,"0")+"s");["cd","cd2"].forEach(function(i){var e=document.getElementById(i);if(e)e.textContent=v;});}f();setInterval(f,1000);})();
+</script>
+<script>(function(){var d="2026-10-28";document.querySelectorAll('.chk input').forEach(function(x){var k="mtm-"+d+"-"+x.dataset.k;try{x.checked=localStorage.getItem(k)==="1";}catch(e){}x.addEventListener("change",function(){try{localStorage.setItem(k,x.checked?"1":"0");}catch(e){}});});})();</script>
+</body>
+</html>
